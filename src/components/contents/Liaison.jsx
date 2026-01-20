@@ -1,5 +1,5 @@
 import React from 'react';
-import LiaisonDropDown from '../../features/liaison/components/LIaisonDropDown';
+import LiaisonDropDown from '../../features/liaison/components/LiaisonDropDown';
 
 const Liaison = () => {
     return (
