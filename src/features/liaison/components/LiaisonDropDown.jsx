@@ -33,10 +33,10 @@ const LiaisonDropDown = () => {
                             <span>아버지</span> 김땡땡
                         </p>
                         <div className='liaison__icons'>
-                            <a href="tel:">
+                            <a href="tel:010-8690-3363">
                                 <img src="/icons/tel_ico.svg" alt="전화" className='liaison__icon' />
                             </a>
-                            <a href="sms:">
+                            <a href="sms:010-8690-3363">
                                 <img src="/icons/sms_ico.svg" alt="문자" className='liaison__icon' />
                             </a>
                         </div>
@@ -46,10 +46,10 @@ const LiaisonDropDown = () => {
                             <span>어머니</span> 김땡땡
                         </p>
                         <div className='liaison__icons'>
-                            <a href="tel:">
+                            <a href="tel:010-8690-3363">
                                 <img src="/icons/tel_ico.svg" alt="전화" className='liaison__icon' />
                             </a>
-                            <a href="sms:">
+                            <a href="sms:010-8690-3363">
                                 <img src="/icons/sms_ico.svg" alt="문자" className='liaison__icon' />
                             </a>
                         </div>
@@ -63,10 +63,10 @@ const LiaisonDropDown = () => {
                             <span>아버지</span> 김뿅뿅
                         </p>
                         <div className='liaison__icons'>
-                            <a href="tel:">
+                            <a href="tel:010-8690-3363">
                                 <img src="/icons/tel_ico.svg" alt="전화" className='liaison__icon' />
                             </a>
-                            <a href="sms:">
+                            <a href="sms:010-8690-3363">
                                 <img src="/icons/sms_ico.svg" alt="문자" className='liaison__icon' />
                             </a>
                         </div>
@@ -76,10 +76,10 @@ const LiaisonDropDown = () => {
                             <span>어머니</span> 김뿅뿅
                         </p>
                         <div className='liaison__icons'>
-                            <a href="tel:">
+                            <a href="tel:010-8690-3363">
                                 <img src="/icons/tel_ico.svg" alt="전화" className='liaison__icon' />
                             </a>
-                            <a href="sms:">
+                            <a href="sms:010-8690-3363">
                                 <img src="/icons/sms_ico.svg" alt="문자" className='liaison__icon' />
                             </a>
                         </div>

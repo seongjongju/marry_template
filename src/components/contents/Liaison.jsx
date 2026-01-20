@@ -12,10 +12,10 @@ const Liaison = () => {
                             김 경 윤
                         </p>
                         <div className='liaison__icons'>
-                            <a href="tel:">
+                            <a href="tel:010-8690-3363">
                                 <img src="/icons/tel_ico.svg" alt="전화" />
                             </a>
-                            <a href="sms:">
+                            <a href="sms:010-8690-3363">
                                 <img src="/icons/sms_ico.svg" alt="문자" />
                             </a>
                         </div>
@@ -26,10 +26,10 @@ const Liaison = () => {
                             허 수 경
                         </p>
                         <div className='liaison__icons'>
-                            <a href="tel:">
+                            <a href="tel:010-8690-3363">
                                 <img src="/icons/tel_ico.svg" alt="전화" className='liaison__icon' />
                             </a>
-                            <a href="sms:">
+                            <a href="sms:010-8690-3363">
                                 <img src="/icons/sms_ico.svg" alt="문자" className='liaison__icon' />
                             </a>
                         </div>

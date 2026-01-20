@@ -1,4 +1,5 @@
 import Calendar from './components/contents/Calendar'
+import Gallerys from './components/contents/Gallerys'
 import Liaison from './components/contents/Liaison'
 import Saying from './components/contents/Saying'
 import Visual from './components/visual/Visual'
@@ -10,6 +11,7 @@ function App() {
       <Saying />
       <Liaison />
       <Calendar />
+      <Gallerys />
     </>
   )
 }

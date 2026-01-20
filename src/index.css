@@ -56,8 +56,8 @@ background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.8));}
 .letterings {position: absolute; top: 0; left: 50%; transform: translateX(-50%); z-index: 1; width: 100%;
 padding: 20px;}
 .letterings svg {display: block;}
-.letterings svg:first-child {width: 69.5313vw; height: 22.0313vw;}
-.letterings svg:last-child {width: 44.8438vw; height: 17.8125vw; margin-left: auto; margin-top: -20px;}
+.letterings svg:first-child {width: 69.5313vw; height: 22.0313vw; max-width: 445px;}
+.letterings svg:last-child {width: 44.8438vw; height: 17.8125vw; margin-left: auto; margin-top: -20px; max-width: 287px;}
 
 /*********************** contents */
 /*** common ***/
@@ -93,3 +93,11 @@ transition: max-height .5s;}
 .calendar__day.not-current-month {color: var(--color-g-0);}
 
 .d-day {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px;}
+
+/*** Gallerys ***/
+.gallery {display: grid; grid-template-columns: repeat(3, 1fr); gap: 3.1250vw;}
+.gallery img {display: block; width: 100%;}
+
+@media screen and (max-width: 400px) {
+    .pswp__img, .pswp__zoom-wrap {padding: 15px !important;}
+}
