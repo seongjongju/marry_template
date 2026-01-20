@@ -2,8 +2,8 @@
 /*** Sumunjang_BodyM ***/
 @font-face {
     font-family: 'Sumunjang_BodyM';
-    src: url('/public/fonts/Sumunjang_BodyM.woff2') format('woff2'),
-        url('/public/fonts/Sumunjang_BodyM.woff') format('woff');
+    src: url('/fonts/Sumunjang_BodyM.woff2') format('woff2'),
+        url('/fonts/Sumunjang_BodyM.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -11,8 +11,8 @@
 
 @font-face {
     font-family: '';
-    src: url('/public/fonts/Sumunjang_BodyMA.woff2') format('woff2'),
-        url('/public/fonts/Sumunjang_BodyMA.woff') format('woff');
+    src: url('/fonts/Sumunjang_BodyMA.woff2') format('woff2'),
+        url('/fonts/Sumunjang_BodyMA.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -21,8 +21,8 @@
 /*** Baskervville SC ***/
 @font-face {
     font-family: 'Baskervville SC';
-    src: url('/public/fonts/BaskervvilleSC-SemiBold.woff2') format('woff2'),
-        url('/public/fonts/BaskervvilleSC-SemiBold.woff') format('woff');
+    src: url('/fonts/BaskervvilleSC-SemiBold.woff2') format('woff2'),
+        url('/fonts/BaskervvilleSC-SemiBold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -30,8 +30,8 @@
 
 @font-face {
     font-family: 'Baskervville SC';
-    src: url('/public/fonts/BaskervvilleSC-Medium.woff2') format('woff2'),
-        url('/public/fonts/BaskervvilleSC-Medium.woff') format('woff');
+    src: url('/fonts/BaskervvilleSC-Medium.woff2') format('woff2'),
+        url('/fonts/BaskervvilleSC-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -39,8 +39,8 @@
 
 @font-face {
     font-family: 'Baskervville SC';
-    src: url('/public/fonts/BaskervvilleSC-Bold.woff2') format('woff2'),
-        url('/public/fonts/askervvilleSC-Bold.woff') format('woff');
+    src: url('/fonts/BaskervvilleSC-Bold.woff2') format('woff2'),
+        url('/fonts/askervvilleSC-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -48,8 +48,8 @@
 
 @font-face {
     font-family: 'Baskervville SC';
-    src: url('/public/fonts/BaskervvilleSC-Regular.woff2') format('woff2'),
-        url('/public/fonts/BaskervvilleSC-Regular.woff') format('woff');
+    src: url('/fonts/BaskervvilleSC-Regular.woff2') format('woff2'),
+        url('/fonts/BaskervvilleSC-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
