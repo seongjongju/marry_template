@@ -1,11 +1,12 @@
-import { useState } from 'react'
-import './App.css'
+import Saying from './components/contents/Saying'
+import Visual from './components/visual/Visual'
 
 function App() {
 
   return (
     <>
-      
+      <Visual />
+      <Saying />
     </>
   )
 }
