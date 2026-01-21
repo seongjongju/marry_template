@@ -24,9 +24,9 @@ const useGsap = () => {
                     { 
                         y:0, opacity: 1, duration: 0.7, ease: 'power2.out',
                         scrollTrigger:{
-                            trigger: title.current, // .title 대신 ref 사용
+                            trigger: title.current, 
                             start:"top 500",
-                            toggleActions:"play none none none"
+                            toggleActions:"play none none none",
                         }
                     }
                 ); 
@@ -39,9 +39,10 @@ const useGsap = () => {
                     { 
                         y:0, opacity: 1, duration: 0.7, ease: 'power2.out',
                         scrollTrigger:{
-                            trigger: textBody_0.current, // .text-body-0 대신 ref 사용
+                            trigger: textBody_0.current, 
                             start:"top 500",
-                            toggleActions:"play none none none"
+                            toggleActions:"play none none none",
+                            markers: true
                         }
                     }
                 ); 
@@ -54,9 +55,10 @@ const useGsap = () => {
                     { 
                         y:0, opacity: 1, duration: 0.7, ease: 'power2.out',
                         scrollTrigger:{
-                            trigger: textBody_1.current, // .text-body-1 대신 ref 사용
+                            trigger: textBody_1.current,
                             start:"top 500",
-                            toggleActions:"play none none none"
+                            toggleActions:"play none none none",
+                            markers: true
                         }
                     }
                 ); 
