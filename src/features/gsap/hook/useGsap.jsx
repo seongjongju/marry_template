@@ -11,6 +11,7 @@ const useGsap = () => {
     const textBody_0 = useRef(); //본문글 - 0
     const textBody_1 = useRef(); //본문글 - 1
 
+    const saying = useRef(); //인사말
     const liaison = useRef(); //연락하기
     const calendar = useRef(); //달력
     const gallery = useRef(); //갤러리
@@ -59,6 +60,21 @@ const useGsap = () => {
                             start:"top 80%",
                             toggleActions:"play none none none",
                             markers: true
+                        }
+                    }
+                ); 
+            }
+
+            // 인사말
+            if (saying.current) {
+                gsap.fromTo(saying.current, 
+                    {y:30, opacity:0},
+                    { 
+                        y:0, opacity: 1, duration: 0.7, ease: 'power2.out',
+                        scrollTrigger:{
+                            trigger: saying.current,
+                            start:"top 80%",
+                            toggleActions:"play none none none"
                         }
                     }
                 ); 
@@ -114,7 +130,7 @@ const useGsap = () => {
         return () => ctx.revert();
     }, []);
 
-    return {app, title, textBody_0, textBody_1, liaison, calendar, gallery};
+    return {app, title, textBody_0, textBody_1, saying, liaison, calendar, gallery};
 };
 
 export default useGsap;
