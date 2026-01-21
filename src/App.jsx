@@ -16,7 +16,9 @@ function App() {
         const vh = window.innerHeight;
         document.documentElement.style.setProperty('--fixed-vh', `${vh}px`);
 
-        ScrollTrigger.refresh();
+        setTimeout(() => {
+          ScrollTrigger.refresh();
+        }, 200);
     };
 
     setFixedVh();
