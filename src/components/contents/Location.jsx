@@ -13,6 +13,10 @@ const Location = () => {
                     서울특별시 강서구 공항대로36길 57 <br />
                     02.1661.3303
                 </p>
+                <div className=''></div>
+                <div className='map'>
+
+                </div> {/* .map : end */}
             </div>
         </section>
     );

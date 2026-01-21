@@ -41,7 +41,7 @@ margin-bottom: 10%; font-weight: 400;}
 #visual {width: 100%; height: 100vh; height: var(--fixed-vh); /* 비주얼 영역 고정을 위해 App.jsx에 스크립트 작성 */ 
 background: url(/images/visual_img.jpg) no-repeat center 20% / cover;
 position: relative; display: flex; flex-direction: column; align-items: center; justify-content: flex-end;
-padding-bottom: 18.4375vw;}
+padding-bottom: 100px;}
 
 #visual::before {position: absolute; content: ''; top: 0; left: 0; width: 100%; height: 100%;
 background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.8));}
@@ -60,12 +60,13 @@ background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.8));}
 .letterings {position: absolute; top: 0; left: 50%; transform: translateX(-50%); z-index: 1; width: 100%;
 padding: 20px;}
 .letterings svg {display: block;}
-.letterings svg:first-child {width: 69.5313vw; height: 22.0313vw; max-width: 445px;}
-.letterings svg:last-child {width: 44.8438vw; height: 17.8125vw; margin-left: auto; margin-top: -20px; max-width: 287px;}
+.letterings svg:first-child {width: 69.5313vw; height: 22.0313vw; max-width: 445px; max-height: 141px;}
+.letterings svg:last-child {width: 44.8438vw; height: 17.8125vw; margin-left: auto; margin-top: -20px; max-width: 287px;
+max-height: 114px;}
 
 /*********************** contents */
 /*** common ***/
-section {padding: 26.8750vw 0 0;}
+section {padding: 120px 0 0;}
 
 /*** Liaison ***/
 .liaison {display: flex; align-items: center; justify-content: center; gap: 100px; margin-bottom: 12%;}
@@ -101,7 +102,7 @@ transition: max-height .5s;}
 .d-day {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px;}
 
 /*** Gallerys ***/
-.gallery {display: grid; grid-template-columns: repeat(3, 1fr); gap: 3.1250vw;}
+.gallery {display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;}
 .gallery img {display: block; width: 100%;}
 
 @media screen and (max-width: 400px) {

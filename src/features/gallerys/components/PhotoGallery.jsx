@@ -12,7 +12,7 @@ const PhotoGallery = ({ images }) => {
                         original={img.original}
                         thumbnail={img.thumbnail}
                         width={400}
-                        height={400}
+                        height={534}
                         alt={img.alt}
                     >
                         {({ ref, open }) => (
