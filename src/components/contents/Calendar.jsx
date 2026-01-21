@@ -12,7 +12,7 @@ const Calendar = () => {
                     <div className='calendar__week'>MON</div>
                     <div className='calendar__week'>TUE</div>
                     <div className='calendar__week'>WED</div>
-                    <div className='calendar__week'>TUR</div>
+                    <div className='calendar__week'>THU</div>
                     <div className='calendar__week'>FRI</div>
                     <div className='calendar__week'>SAT</div>
                     {/***************** 요일 ******************/}

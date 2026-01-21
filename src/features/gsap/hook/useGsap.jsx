@@ -16,6 +16,11 @@ const useGsap = () => {
     const calendar = useRef(); //달력
     const gallery = useRef(); //갤러리
 
+    //지도
+    const locationBtns = useRef(); 
+    const map = useRef(); 
+    const locationDetails = useRef([]); 
+
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
             //타이틀
@@ -73,7 +78,6 @@ const useGsap = () => {
                             trigger: saying.current,
                             start:"top 50%",
                             toggleActions:"play none none none",
-                            markers: true
                         }
                     }
                 ); 
@@ -124,12 +128,72 @@ const useGsap = () => {
                 ); 
             }
 
+            //지도
+            if (locationBtns.current) {
+                gsap.fromTo(locationBtns.current, 
+                    {y:30, opacity:0},
+                    { 
+                        y:0, opacity: 1, duration: 0.7, ease: 'power2.out',
+                        scrollTrigger:{
+                            trigger: locationBtns.current,
+                            start:"top 70%",
+                            toggleActions:"play none none none"
+                        }
+                    }
+                ); 
+            }
+
+            if (map.current) {
+                gsap.fromTo(map.current, 
+                    {y:30, opacity:0},
+                    { 
+                        y:0, opacity: 1, duration: 0.7, ease: 'power2.out',
+                        scrollTrigger:{
+                            trigger: map.current,
+                            start:"top 70%",
+                            toggleActions:"play none none none"
+                        }
+                    }
+                ); 
+            }
+
+            if (locationDetails.current) {
+                gsap.utils.toArray('.location__detail').forEach((el, i) => {
+                    gsap.fromTo(el,
+                        { y: 30, opacity: 0 },
+                        {
+                            y: 0,
+                            opacity: 1,
+                            duration: 0.7,
+                            delay: i * 0.1,
+                            ease: 'power2.out',
+                            scrollTrigger: {
+                                trigger: el,
+                                start: 'top 70%',
+                                toggleActions: 'play none none none',
+                            },
+                        }
+                    );
+                });
+            }
         }, app); 
         
         return () => ctx.revert();
     }, []);
 
-    return {app, title, textBody_0, textBody_1, saying, liaison, calendar, gallery};
+    return {
+        app, 
+        title, 
+        textBody_0, 
+        textBody_1, 
+        saying, 
+        liaison, 
+        calendar, 
+        gallery, 
+        locationBtns, 
+        map,
+        locationDetails
+    };
 };
 
 export default useGsap;
