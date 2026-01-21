@@ -18,116 +18,99 @@ const useGsap = () => {
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
             //타이틀
-            gsap.fromTo(title.current, 
-                {y:30, opacity:0},
-                { 
-                    y:0,
-                    opacity: 1,
-                    duration: 0.7,
-                    ease: 'power2.out',
-                    scrollTrigger:{
-                        trigger:".title",
-                        start:"top 500",
-                        end:"100 200",
-                        markers:true,
-                        toggleActions:"play none none none"
+            if (title.current) {
+                gsap.fromTo(title.current, 
+                    {y:30, opacity:0},
+                    { 
+                        y:0, opacity: 1, duration: 0.7, ease: 'power2.out',
+                        scrollTrigger:{
+                            trigger: title.current, // .title 대신 ref 사용
+                            start:"top 500",
+                            toggleActions:"play none none none"
+                        }
                     }
-                }
-            ); 
+                ); 
+            }
 
-            //본문글 - 0
-            gsap.fromTo(textBody_0.current, 
-                {y:30, opacity:0},
-                { 
-                    y:0,
-                    opacity: 1,
-                    duration: 0.7,
-                    ease: 'power2.out',
-                    scrollTrigger:{
-                        trigger:".text-body-0",
-                        start:"top 500",
-                        end:"100 200",
-                        markers:true,
-                        toggleActions:"play none none none"
+            // 본문글 - 0
+            if (textBody_0.current) {
+                gsap.fromTo(textBody_0.current, 
+                    {y:30, opacity:0},
+                    { 
+                        y:0, opacity: 1, duration: 0.7, ease: 'power2.out',
+                        scrollTrigger:{
+                            trigger: textBody_0.current, // .text-body-0 대신 ref 사용
+                            start:"top 500",
+                            toggleActions:"play none none none"
+                        }
                     }
-                }
-            ); 
+                ); 
+            }
+
+            //본문글 - 1 
+            if (textBody_1.current) {
+                gsap.fromTo(textBody_1.current, 
+                    {y:30, opacity:0},
+                    { 
+                        y:0, opacity: 1, duration: 0.7, ease: 'power2.out',
+                        scrollTrigger:{
+                            trigger: textBody_1.current, // .text-body-1 대신 ref 사용
+                            start:"top 500",
+                            toggleActions:"play none none none"
+                        }
+                    }
+                ); 
+            }
             
-            //본문글 - 1
-            gsap.fromTo(textBody_1.current, 
-                {y:30, opacity:0},
-                { 
-                    y:0,
-                    opacity: 1,
-                    duration: 0.7,
-                    ease: 'power2.out',
-                    scrollTrigger:{
-                        trigger:".text-body-1",
-                        start:"top 500",
-                        end:"100 200",
-                        markers:true,
-                        toggleActions:"play none none none"
+            // 연락하기
+            if (liaison.current) {
+                gsap.fromTo(liaison.current, 
+                    {y:30, opacity:0},
+                    { 
+                        y:0, opacity: 1, duration: 0.7, ease: 'power2.out',
+                        scrollTrigger:{
+                            trigger: liaison.current,
+                            start:"top 500",
+                            toggleActions:"play none none none"
+                        }
                     }
-                }
-            ); 
-            
-            //연락하기
-            gsap.fromTo(liaison.current, 
-                {y:30, opacity:0},
-                { 
-                    y:0,
-                    opacity: 1,
-                    duration: 0.7,
-                    ease: 'power2.out',
-                    scrollTrigger:{
-                        trigger:".liaison",
-                        start:"top 500",
-                        end:"100 200",
-                        markers:true,
-                        toggleActions:"play none none none"
-                    }
-                }
-            ); 
+                ); 
+            }
 
             //달력
-            gsap.fromTo(calendar.current, 
-                {y:30, opacity:0},
-                { 
-                    y:0,
-                    opacity: 1,
-                    duration: 0.7,
-                    ease: 'power2.out',
-                    scrollTrigger:{
-                        trigger:".calendar",
-                        start:"top 500",
-                        end:"100 200",
-                        markers:true,
-                        toggleActions:"play none none none"
+            if (calendar.current) {
+                gsap.fromTo(calendar.current, 
+                    {y:30, opacity:0},
+                    { 
+                        y:0, opacity: 1, duration: 0.7, ease: 'power2.out',
+                        scrollTrigger:{
+                            trigger: calendar.current,
+                            start:"top 500",
+                            toggleActions:"play none none none"
+                        }
                     }
-                }
-            ); 
+                ); 
+            }
 
             //갤러리
-            gsap.fromTo(gallery.current, 
-                {y:30, opacity:0},
-                { 
-                    y:0,
-                    opacity: 1,
-                    duration: 0.7,
-                    ease: 'power2.out',
-                    scrollTrigger:{
-                        trigger:".gallery",
-                        start:"top 500",
-                        end:"100 200",
-                        markers:true,
-                        toggleActions:"play none none none"
+            if (gallery.current) {
+                gsap.fromTo(gallery.current, 
+                    {y:30, opacity:0},
+                    { 
+                        y:0, opacity: 1, duration: 0.7, ease: 'power2.out',
+                        scrollTrigger:{
+                            trigger: gallery.current,
+                            start:"top 500",
+                            toggleActions:"play none none none"
+                        }
                     }
-                }
-            ); 
+                ); 
+            }
+
         }, app); 
         
         return () => ctx.revert();
-    });
+    }, []);
 
     return {app, title, textBody_0, textBody_1, liaison, calendar, gallery};
 };
