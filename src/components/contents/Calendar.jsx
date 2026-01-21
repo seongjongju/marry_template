@@ -8,6 +8,15 @@ const Calendar = () => {
             <div className='inner'>
                 <h1 className='title' style={{fontFamily: "Sumunjang_BodyM"}} ref={title}>6월</h1>
                 <div className='calendar' ref={calendar}>
+                    <div className='calendar__week sunday'>SUN</div>
+                    <div className='calendar__week'>MON</div>
+                    <div className='calendar__week'>TUE</div>
+                    <div className='calendar__week'>WED</div>
+                    <div className='calendar__week'>TUR</div>
+                    <div className='calendar__week'>FRI</div>
+                    <div className='calendar__week'>SAT</div>
+                    {/***************** 요일 ******************/}
+
                     <div className='calendar__day not-current-month'>31</div>
                     <div className='calendar__day'>1</div>
                     <div className='calendar__day'>2</div>

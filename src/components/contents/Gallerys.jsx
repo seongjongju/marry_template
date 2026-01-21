@@ -21,7 +21,7 @@ const images = [
     { original: '/images/gallery_img16.jpg', thumbnail: '/images/gallery_img16.jpg', alt: 'gallery_img16' },
     { original: '/images/gallery_img17.jpg', thumbnail: '/images/gallery_img17.jpg', alt: 'gallery_img17' },
     { original: '/images/gallery_img18.jpg', thumbnail: '/images/gallery_img18.jpg', alt: 'gallery_img18' },
-    { original: '/images/gallery_img19.png', thumbnail: '/images/gallery_img19.png', alt: 'gallery_img19' },
+    { original: '/images/gallery_img19.jpg', thumbnail: '/images/gallery_img19.jpg', alt: 'gallery_img19' },
     { original: '/images/gallery_img20.jpg', thumbnail: '/images/gallery_img20.jpg', alt: 'gallery_img20' },
 ];
 
