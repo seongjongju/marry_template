@@ -25,19 +25,18 @@ const FeatLocation = () => {
 
     // 카카오내비
     const handleOpenKakaoNavi = (e) => {
-        const name = encodeURIComponent('더뉴컨벤션');
-        const x = '126.836338'; // 경도 (WGS84 기준)
-        const y = '37.558778';  // 위도 (WGS84 기준)
+        const name = '더뉴컨벤션';
+        const x = '126.836338'; // 경도
+        const y = '37.558778';  // 위도
         
-        // 카카오내비 앱 연동 스키마 (navigate: 길찾기 모드)
-        const kakaoNaviUrl = `kakaonavi-sdk://navigate?coord_type=wgs84&name=${name}&x=${x}&y=${y}`;
+        const kakaoNaviUrl = `https://map.kakao.com/link/to/${name},${y},${x}`;
         
         if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-            // a 태그의 href를 직접 변경하여 카카오톡 브라우저 종료 방지
             e.currentTarget.href = kakaoNaviUrl;
         } else {
             e.preventDefault();
-            alert('모바일 기기에서만 실행 가능합니다.');
+            //window.open(kakaoNaviUrl, '_blank');
+            alert('모바일 기기에서만 티맵 앱을 실행할 수 있습니다.');
         }
     };
 
