@@ -11,15 +11,28 @@ const Location = () => {
         const y = '37.5118436';  // 위도 (Latitude)
         
         // 티맵 앱 연동 스키마
-        const tmapUrl = `tmap://search?name=${name}&posx=${x}&posy=${y}`;
+        let tmapUrl = `tmap://search?name=${name}&posx=${x}&posy=${y}`;
         
+        // 카카오톡 인앱 브라우저인지 확인
+        const isKakaotalk = /KAKAOTALK/i.test(navigator.userAgent);
+
+        if (isKakaotalk) {
+            // 카카오톡일 경우 외부 브라우저로 유도하여 브라우저 종료 방지
+            const currentUrl = window.location.href;
+            const separator = currentUrl.includes('?') ? '&' : '?';
+            window.location.href = currentUrl + separator + 'open_external_browser=1';
+            return;
+        }
+
         // 모바일 기기인지 확인 후 실행
-        if (/Android/i.test(navigator.userAgent)) {
-            // 안드로이드: 직접 실행
-            window.location.href = tmapUrl;
-        } else if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-            // iOS: 설치되어 있지 않을 경우 앱스토어로 이동하는 로직이 필요할 수 있음
-            window.location.href = tmapUrl;
+        if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+            // <a> 태그를 생성하여 클릭하는 방식 (브라우저 종료 현상 완화)
+            const anchor = document.createElement('a');
+            anchor.href = tmapUrl;
+            anchor.target = '_self'; // 현재 창 유지 시도
+            document.body.appendChild(anchor);
+            anchor.click();
+            document.body.removeChild(anchor);
         } else {
             alert('모바일 기기에서만 티맵 앱을 실행할 수 있습니다.');
         }
