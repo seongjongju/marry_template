@@ -1,11 +1,13 @@
 import React from 'react';
+import useGsap from '../../features/gsap/hook/useGsap';
 
 const Calendar = () => {
+    const {app, title, calendar} = useGsap();
     return (
-        <section>
+        <section ref={app}>
             <div className='inner'>
-                <h1 className='title' style={{fontFamily: "Sumunjang_BodyM"}}>6월</h1>
-                <div className='calendar'>
+                <h1 className='title' style={{fontFamily: "Sumunjang_BodyM"}} ref={title}>6월</h1>
+                <div className='calendar' ref={calendar}>
                     <div className='calendar__day not-current-month'>31</div>
                     <div className='calendar__day'>1</div>
                     <div className='calendar__day'>2</div>

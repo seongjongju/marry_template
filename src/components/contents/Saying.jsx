@@ -1,11 +1,13 @@
 import React from 'react';
+import useGsap from '../../features/gsap/hook/useGsap';
 
-const Saying = () => {
+const Saying = () => {   
+    const {app, title, textBody_1} = useGsap(); 
     return (
-        <section>
+        <section ref={app}>
             <div className='inner'>
-                <h1 className='title'>INVITATION</h1>
-                <p className='text-body-1 color-b-0 text-center'>
+                <h1 className='title' ref={title}>INVITATION</h1>
+                <p className='text-body-1 color-b-0 text-center' ref={textBody_1}>
                     하얀 눈처럼 순수한 사람을 만나 <br />
                     드디어 결혼합니다. <br />
                     그동안 아껴주신 마음 그대로 <br />

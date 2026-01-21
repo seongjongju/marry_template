@@ -1,5 +1,6 @@
 import React from 'react';
 import PhotoGallery from '../../features/gallerys/components/PhotoGallery';
+import useGsap from '../../features/gsap/hook/useGsap';
 const images = [
     { original: '/images/gallery_img0.jpg', thumbnail: '/images/gallery_img0.jpg', alt: 'gallery_img0' },
     { original: '/images/gallery_img1.jpg', thumbnail: '/images/gallery_img1.jpg', alt: 'gallery_img1' },
@@ -19,11 +20,13 @@ const images = [
 ];
 
 const Gallerys = () => {
+    const {app, title, gallery} = useGsap();
+
     return (
-        <section>
+        <section ref={app}>
             <div className='inner'>
-                <h1 className='title'>GALLERY</h1>
-                <div className='gallery'>
+                <h1 className='title' ref={title}>GALLERY</h1>
+                <div className='gallery' ref={gallery}>
                     <PhotoGallery 
                         images={images}
                     />

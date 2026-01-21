@@ -1,11 +1,14 @@
 import React from 'react';
 import LiaisonDropDown from '../../features/liaison/components/LiaisonDropDown';
+import useGsap from '../../features/gsap/hook/useGsap';
 
 const Liaison = () => {
+    const {app, liaison} = useGsap();
+
     return (
-        <section>
-            <div className='inner'>
-                <div className='liaison'>
+        <section ref={app}>
+            <div className='inner' ref={liaison}>
+                <div className='liaison' >
                     <div className='liaison__item'>
                         <p className='liaison__name'>
                             신랑 <br />
