@@ -4,36 +4,20 @@ import useGsap from '../../features/gsap/hook/useGsap';
 const Location = () => {
     const {app, title, textBody_1, textBody_0} = useGsap();
 
-    const handleOpenTmap = () => {
+    const handleOpenTmap = (e) => {
         // 목적지 설정 (예: 코엑스)
         const name = encodeURIComponent('코엑스');
         const x = '127.0581026'; // 경도 (Longitude)
         const y = '37.5118436';  // 위도 (Latitude)
         
         // 티맵 앱 연동 스키마
-        let tmapUrl = `tmap://search?name=${name}&posx=${x}&posy=${y}`;
+        const tmapUrl = `tmap://search?name=${name}&posx=${x}&posy=${y}`;
         
-        // 카카오톡 인앱 브라우저인지 확인
-        const isKakaotalk = /KAKAOTALK/i.test(navigator.userAgent);
-
-        if (isKakaotalk) {
-            // 카카오톡일 경우 외부 브라우저로 유도하여 브라우저 종료 방지
-            const currentUrl = window.location.href;
-            const separator = currentUrl.includes('?') ? '&' : '?';
-            window.location.href = currentUrl + separator + 'open_external_browser=1';
-            return;
-        }
-
-        // 모바일 기기인지 확인 후 실행
+        // 모바일 기기인지 확인
         if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-            // <a> 태그를 생성하여 클릭하는 방식 (브라우저 종료 현상 완화)
-            const anchor = document.createElement('a');
-            anchor.href = tmapUrl;
-            anchor.target = '_self'; // 현재 창 유지 시도
-            document.body.appendChild(anchor);
-            anchor.click();
-            document.body.removeChild(anchor);
+            e.currentTarget.href = tmapUrl;
         } else {
+            e.preventDefault(); // PC일 경우 이동 방지
             alert('모바일 기기에서만 티맵 앱을 실행할 수 있습니다.');
         }
     };
@@ -51,19 +35,28 @@ const Location = () => {
 
             <div className='location'>
                 <div className='location__btns'>
-
+                    {/* 버튼들을 여기에 추가하세요 */}
                 </div>
                 <div className='map'>
                     <iframe 
                         style={{ border: "none" }}
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.9393824348476!2d126.83438857632291!3d37.556491924703344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9c68bfb5c69f%3A0x220458f873585ae1!2z642U64m07Luo67Kk7IWY7Juo65Sp!5e0!3m2!1sko!2skr!4v1769000968228!5m2!1sko!2skr" width="100%" height="100%"  referrerpolicy="no-referrer-when-downgrade"
+                        title="google-map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.9393824348476!2d126.83438857632291!3d37.556491924703344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9c68bfb5c69f%3A0x220458f873585ae1!2z642U64m07Luo67Kk7IWY7Juo65Sp!5e0!3m2!1sko!2skr!4v1769000968228!5m2!1sko!2skr" 
+                        width="100%" 
+                        height="100%"  
+                        referrerPolicy="no-referrer-when-downgrade"
                     >
                     </iframe>
                 </div>
-                <button
+                
+                <a 
+                    href="#" 
                     onClick={handleOpenTmap}
-                >티맵 테스트</button>
-            </div> {/* .location : end */}
+                    className="tmap-link"
+                >
+                    티맵 테스트
+                </a>
+            </div>
         </section>
     );
 };
