@@ -211,7 +211,7 @@ const useGsap = () => {
                             ease: 'power2.out',
                             scrollTrigger: {
                                 trigger: el,
-                                start: 'top 90%',
+                                start: 'top 100%',
                                 toggleActions: 'play none none none',
                             },
                         }
