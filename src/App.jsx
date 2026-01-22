@@ -8,6 +8,7 @@ import Location from './components/contents/Location'
 import Saying from './components/contents/Saying'
 import Visual from './components/visual/Visual'
 import Impart from './components/contents/Impart'
+import Footer from './components/footer/Footer'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -34,6 +35,7 @@ function App() {
       <Gallerys />
       <Location />
       <Impart />
+      <Footer />
     </>
   )
 }

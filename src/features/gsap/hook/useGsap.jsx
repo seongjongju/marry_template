@@ -21,6 +21,10 @@ const useGsap = () => {
     const map = useRef(); 
     const locationDetails = useRef([]); 
 
+    //전하다
+    const remittance = useRef();
+    const shares = useRef([]);
+
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
             //타이틀
@@ -176,6 +180,41 @@ const useGsap = () => {
                     );
                 });
             }
+
+            //전하다
+            if (remittance.current) {
+                gsap.fromTo(remittance.current, 
+                    {y:30, opacity:0},
+                    { 
+                        y:0, opacity: 1, duration: 0.7, ease: 'power2.out',
+                        scrollTrigger:{
+                            trigger: remittance.current,
+                            start:"top 70%",
+                            toggleActions:"play none none none"
+                        }
+                    }
+                ); 
+            }
+
+            if (shares.current) {
+                gsap.utils.toArray('.share__button').forEach((el, i) => {
+                    gsap.fromTo(el,
+                        { y: 30, opacity: 0 },
+                        {
+                            y: 0,
+                            opacity: 1,
+                            duration: 0.7,
+                            delay: i * 0.1,
+                            ease: 'power2.out',
+                            scrollTrigger: {
+                                trigger: el,
+                                start: 'top 90%',
+                                toggleActions: 'play none none none',
+                            },
+                        }
+                    );
+                });
+            }
         }, app); 
         
         return () => ctx.revert();
@@ -192,7 +231,9 @@ const useGsap = () => {
         gallery, 
         locationBtns, 
         map,
-        locationDetails
+        locationDetails,
+        remittance,
+        shares
     };
 };
 

@@ -5,8 +5,8 @@ const useShare = () => {
         /* 깃허브 업로드를 위한 주석 추가 */
         const shareData = {
             title: "모바일 청첩장 A타입",
-            text: "모바일 청첩장 공유 테스트",
-            url: "https://marrya.vercel.app/"
+            text: "모바일 청첩장 A타입",
+            url: "https://marrya.netlify.app/"
         };
 
         try{
@@ -22,8 +22,8 @@ const useShare = () => {
             // 실제 공유 로직
             await navigator.share({
                 title: "모바일 청첩장 A타입",
-                text: "모바일 청첩장 공유 테스트",
-                url: "https://marrya.vercel.app/"
+                text: "모바일 청첩장 A타입",
+                url: "https://marrya.netlify.app/"
             });
         } catch(error) {
             console.error(error);

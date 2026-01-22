@@ -1,11 +1,13 @@
 import React from 'react';
 import useClipBoard from '../../clipBoard/hook/useClipBoard';
+import useGsap from '../../gsap/hook/useGsap';
 
 const ImpartRemittance = () => {
+    const {remittance} = useGsap();
     const {handleCopyClipBoard} = useClipBoard();
 
     return (
-        <div className='remittance'>
+        <div className='remittance' ref={remittance}>
             <a 
                 href="#self" 
                 className='remittance__button'
