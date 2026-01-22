@@ -14,7 +14,7 @@ const FeatLocation = () => {
         const y = '37.5118436';  // 위도 (Latitude)
         
         // 티맵 앱 연동 스키마
-        const tmapUrl = `tmap://search?name=${name}&posx=${x}&posy=${y}`;
+        const tmapUrl = `https://search?name=${name}&posx=${x}&posy=${y}`;
         
         // 모바일 기기인지 확인
         if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
@@ -37,8 +37,7 @@ const FeatLocation = () => {
             e.currentTarget.href = kakaoNaviUrl;
         } else {
             e.preventDefault();
-            //window.open(kakaoNaviUrl, '_blank');
-            alert('모바일 기기에서만 티맵 앱을 실행할 수 있습니다.');
+            alert('모바일 기기에서만 카카오 앱을 실행할 수 있습니다.');
         }
     };
 
@@ -73,14 +72,14 @@ const FeatLocation = () => {
                 </iframe>
                 <div className='location__road'>
                     <a 
-                        href="#" 
+                        href="#self" 
                         onClick={handleOpenTmap}
                         className="location__road--button"
                     >
                         티맵
                     </a>
                     <a 
-                        href="#" 
+                        href="#self" 
                         onClick={handleOpenKakaoNavi}
                         className="location__road--button"
                     >
