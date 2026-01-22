@@ -22,13 +22,13 @@ const FeatLocation = () => {
         
         // 모바일 기기인지 확인
         if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-            e.currentTarget.href = tmapUrl;
+            window.location.href = tmapUrl;
 
             setTimeout(() => {
                 if (document.webkitHidden || document.hidden) return;
                 
-                if(/Android/i.test(navigator.userAgent)) e.currentTarget.href = playStoreUrl;
-                else if(/iPhone|iPad|iPod/i.test(navigator.userAgent)) e.currentTarget.href = appStoreUrl;
+                if(/Android/i.test(navigator.userAgent)) window.location.href = playStoreUrl;
+                else if(/iPhone|iPad|iPod/i.test(navigator.userAgent)) window.location.href = appStoreUrl;
             }, 1000);
         } else {
             e.preventDefault(); // PC일 경우 이동 방지
@@ -82,13 +82,13 @@ const FeatLocation = () => {
                 >
                 </iframe>
                 <div className='location__road'>
-                    <a 
+                    <button 
                         href="#self" 
                         onClick={handleOpenTmap}
                         className="location__road--button"
                     >
                         티맵
-                    </a>
+                    </button>
                     <a 
                         href="#self" 
                         onClick={handleOpenKakaoNavi}
