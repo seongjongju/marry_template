@@ -83,8 +83,9 @@ const useGsap = () => {
                         y:0, opacity: 1, duration: 0.7, ease: 'power2.out',
                         scrollTrigger:{
                             trigger: saying.current,
-                            start:"top 50%",
+                            start:"top 80%",
                             toggleActions:"play none none none",
+                            markers: true
                         }
                     }
                 ); 

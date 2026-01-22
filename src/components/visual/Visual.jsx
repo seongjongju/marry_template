@@ -1,9 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Lettering from '../svg/Lettering';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Visual = () => {
+    const [vhHeight, setVhHeight] = useState("100vh");
+
+    //비주얼 영역이 핸드폰 기종에 따라 높이를 맞추는 함수
+    useEffect(() => {
+        const setFixedVh = () => {
+            const vh = window.innerHeight;
+
+            setVhHeight(vh);
+
+            ScrollTrigger.refresh();
+        };
+
+        setFixedVh();
+    }, []);
+
     return (
-        <div id='visual'>
+        <div id='visual' style={{ height: vhHeight }}>
             <Lettering />
             <div className='inner'>
                 <div className='visual__detail'>
