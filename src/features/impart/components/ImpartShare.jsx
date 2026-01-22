@@ -20,7 +20,7 @@ const ImpartShare = () => {
                             href="#self"
                             onClick={handleClickShare}
                         >
-                            <img src="/icons/kakao_ico.svg" alt="카카오톡 아이콘" />
+                            <img src="/icons/kakao_ico.svg" alt="카카오톡 아이콘" className='share__icon kakao' />
                             카카오톡으로 공유하기
                         </button>   
                     )
@@ -30,7 +30,7 @@ const ImpartShare = () => {
                     href="#self"
                     onClick={() => {handleCopyClipBoard('https://marrya.netlify.app/')}} 
                 >
-                    <img src="/icons/share_ico.svg" alt="공유 아이콘" />
+                    <img src="/icons/share_ico.svg" alt="공유 아이콘" className='share__icon share' />
                     청첩장 주소 복사하기
                 </a>
             </div>

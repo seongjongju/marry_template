@@ -38,7 +38,7 @@ const useGsap = () => {
                         y:0, opacity: 1, duration: 0.7, ease: 'power2.out',
                         scrollTrigger:{
                             trigger: title.current, 
-                            start:"top 70%",
+                            start:"top 80%",
                             toggleActions:"play none none none",
                         }
                     }
@@ -68,7 +68,7 @@ const useGsap = () => {
                         y:0, opacity: 1, duration: 0.7, ease: 'power2.out',
                         scrollTrigger:{
                             trigger: textBody_1.current,
-                            start:"top 70%",
+                            start:"top 80%",
                             toggleActions:"play none none none",
                         }
                     }
@@ -83,7 +83,7 @@ const useGsap = () => {
                         y:0, opacity: 1, duration: 0.7, ease: 'power2.out',
                         scrollTrigger:{
                             trigger: saying.current,
-                            start:"top 50%",
+                            start:"top 70%",
                             toggleActions:"play none none none",
                         }
                     }
@@ -98,7 +98,7 @@ const useGsap = () => {
                         y:0, opacity: 1, duration: 0.7, ease: 'power2.out',
                         scrollTrigger:{
                             trigger: liaison.current,
-                            start:"top 70%",
+                            start:"top 80%",
                             toggleActions:"play none none none"
                         }
                     }
@@ -113,7 +113,7 @@ const useGsap = () => {
                         y:0, opacity: 1, duration: 0.7, ease: 'power2.out',
                         scrollTrigger:{
                             trigger: calendar.current,
-                            start:"top 70%",
+                            start:"top 80%",
                             toggleActions:"play none none none"
                         }
                     }
@@ -128,7 +128,7 @@ const useGsap = () => {
                         y:0, opacity: 1, duration: 0.7, ease: 'power2.out',
                         scrollTrigger:{
                             trigger: gallery.current,
-                            start:"top 70%",
+                            start:"top 80%",
                             toggleActions:"play none none none"
                         }
                     }
@@ -143,7 +143,7 @@ const useGsap = () => {
                         y:0, opacity: 1, duration: 0.7, ease: 'power2.out',
                         scrollTrigger:{
                             trigger: locationBtns.current,
-                            start:"top 70%",
+                            start:"top 80%",
                             toggleActions:"play none none none"
                         }
                     }
@@ -157,7 +157,7 @@ const useGsap = () => {
                         y:0, opacity: 1, duration: 0.7, ease: 'power2.out',
                         scrollTrigger:{
                             trigger: map.current,
-                            start:"top 70%",
+                            start:"top 80%",
                             toggleActions:"play none none none"
                         }
                     }
@@ -176,7 +176,7 @@ const useGsap = () => {
                             ease: 'power2.out',
                             scrollTrigger: {
                                 trigger: el,
-                                start: 'top 70%',
+                                start: 'top 80%',
                                 toggleActions: 'play none none none',
                             },
                         }
@@ -192,7 +192,7 @@ const useGsap = () => {
                         y:0, opacity: 1, duration: 0.7, ease: 'power2.out',
                         scrollTrigger:{
                             trigger: remittance.current,
-                            start:"top 70%",
+                            start:"top 80%",
                             toggleActions:"play none none none"
                         }
                     }
@@ -227,7 +227,7 @@ const useGsap = () => {
                         y:0, opacity: 1, duration: 0.7, ease: 'power2.out',
                         scrollTrigger:{
                             trigger: timer.current,
-                            start:"top 70%",
+                            start:"top 80%",
                             toggleActions:"play none none none"
                         }
                     }
