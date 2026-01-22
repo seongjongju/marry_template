@@ -85,7 +85,6 @@ const useGsap = () => {
                             trigger: saying.current,
                             start:"top 80%",
                             toggleActions:"play none none none",
-                            markers: true
                         }
                     }
                 ); 
