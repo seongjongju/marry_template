@@ -14,11 +14,22 @@ const FeatLocation = () => {
         const y = '37.5118436';  // 위도 (Latitude)
         
         // 티맵 앱 연동 스키마
-        const tmapUrl = `https://search?name=${name}&posx=${x}&posy=${y}`;
+        const tmapUrl = `tmap://search?name=${name}&posx=${x}&posy=${y}`;
+
+        // 앱 스토어 이동 URL (앱이 없을 경우)
+        const appStoreUrl = "https://apps.apple.com"; // iOS
+        const playStoreUrl = "market://details?id=com.skt.tmap.ku"; // Android
         
         // 모바일 기기인지 확인
         if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
             e.currentTarget.href = tmapUrl;
+
+            setTimeout(() => {
+                if (document.webkitHidden || document.hidden) return;
+                
+                if(/Android/i.test(navigator.userAgent)) e.currentTarget.href = playStoreUrl;
+                else if(/iPhone|iPad|iPod/i.test(navigator.userAgent)) e.currentTarget.href = appStoreUrl;
+            }, 1000);
         } else {
             e.preventDefault(); // PC일 경우 이동 방지
             alert('모바일 기기에서만 티맵 앱을 실행할 수 있습니다.');
@@ -37,7 +48,7 @@ const FeatLocation = () => {
             e.currentTarget.href = kakaoNaviUrl;
         } else {
             e.preventDefault();
-            alert('모바일 기기에서만 카카오 앱을 실행할 수 있습니다.');
+            alert('모바일 기기에서만 티맵 앱을 실행할 수 있습니다.');
         }
     };
 
