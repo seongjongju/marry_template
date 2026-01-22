@@ -1,4 +1,5 @@
 import React from 'react';
+import { isIOS } from 'react-device-detect';
 import useClipBoard from '../../clipBoard/hook/useClipBoard';
 import useShare from '../../share/hook/useShare';
 import useGsap from '../../gsap/hook/useGsap';
@@ -8,13 +9,11 @@ const ImpartShare = () => {
     const {handleCopyClipBoard} = useClipBoard();
     const {handleClickShare} = useShare();
 
-    const userAgent = navigator.userAgent.toLowerCase();
-
     return (
         <div className='share' ref={app}>
             <div className='share__btns' ref={shares}>
                 {
-                    userAgent.includes('iphone') || userAgent.includes('ipad') &&
+                    isIOS &&
                     (
                         <button
                             className='share__button'
