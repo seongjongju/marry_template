@@ -17,7 +17,7 @@ const FeatLocation = () => {
         const tmapUrl = `tmap://search?name=${name}&posx=${x}&posy=${y}`;
 
         // 앱 스토어 이동 URL (앱이 없을 경우)
-        const appStoreUrl = "https://apps.apple.com"; // iOS
+        const appStoreUrl = "https://apps.apple.com/kr/app/id431589174"; // iOS
         const playStoreUrl = "market://details?id=com.skt.tmap.ku"; // Android
         
         // 모바일 기기인지 확인
@@ -29,7 +29,7 @@ const FeatLocation = () => {
                 
                 if(/Android/i.test(navigator.userAgent)) window.location.href = playStoreUrl;
                 else if(/iPhone|iPad|iPod/i.test(navigator.userAgent)) window.location.href = appStoreUrl;
-            }, 1000);
+            }, 500);
         } else {
             e.preventDefault(); // PC일 경우 이동 방지
             alert('모바일 기기에서만 티맵 앱을 실행할 수 있습니다.');
@@ -82,13 +82,13 @@ const FeatLocation = () => {
                 >
                 </iframe>
                 <div className='location__road'>
-                    <button 
+                    <a 
                         href="#self" 
                         onClick={handleOpenTmap}
                         className="location__road--button"
                     >
                         티맵
-                    </button>
+                    </a>
                     <a 
                         href="#self" 
                         onClick={handleOpenKakaoNavi}
