@@ -9,9 +9,9 @@ const FeatLocation = () => {
     //티맵
     const handleOpenTmap = (e) => {
         // 목적지 설정 (예: 코엑스)
-        const name = encodeURIComponent('코엑스');
-        const x = '127.0581026'; // 경도 (Longitude)
-        const y = '37.5118436';  // 위도 (Latitude)
+        const name = encodeURIComponent('더 뉴컨벤션');
+        const x = '126.8368847974'; // 경도 (Longitude)
+        const y = '37.5562637915563';  // 위도 (Latitude)
         
         // 티맵 앱 연동 스키마
         const tmapUrl = `tmap://search?name=${name}&posx=${x}&posy=${y}`;
@@ -38,9 +38,9 @@ const FeatLocation = () => {
 
     // 카카오내비
     const handleOpenKakaoNavi = (e) => {
-        const name = '더뉴컨벤션';
-        const x = '126.836338'; // 경도
-        const y = '37.558778';  // 위도
+        const name = '더 뉴컨벤션';
+        const x = '126.8368847974'; // 경도 (Longitude)
+        const y = '37.5562637915563';  // 위도 (Latitude)
         
         const kakaoNaviUrl = `https://map.kakao.com/link/to/${name},${y},${x}`;
         
