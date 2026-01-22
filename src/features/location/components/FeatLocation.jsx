@@ -1,8 +1,10 @@
 import React from 'react';
 import useGsap from '../../gsap/hook/useGsap';
+import useClipBoard from '../../clipBoard/hook/useClipBoard';
 
 const FeatLocation = () => {
     const {app, locationBtns, map, locationDetails } = useGsap();
+    const {handleCopyClipBoard} = useClipBoard();
 
     //티맵
     const handleOpenTmap = (e) => {
@@ -37,17 +39,6 @@ const FeatLocation = () => {
             e.preventDefault();
             //window.open(kakaoNaviUrl, '_blank');
             alert('모바일 기기에서만 티맵 앱을 실행할 수 있습니다.');
-        }
-    };
-
-    //클립보드 복사
-    const handleCopyClipBoard = async (text) => {
-        try {
-            await navigator.clipboard.writeText(text);
-            
-            alert('복사 성공!');
-        } catch (error) {
-            alert('복사 실패!');
         }
     };
 
@@ -147,8 +138,8 @@ const FeatLocation = () => {
                             <p className='location__text long'>웨딩홀 내 주차 지하 4층~ 지상 1층</p>
                         </li> {/* .location__list--item : end */}
                     </ul> {/* .location__list : end */}
-                    <p className='text-body-0 ps'>주차장 만차 시 근처 이대서울병원 주차장 이용</p>
-                    <p className='text-body-0 ps'>이대서울병원 주차장 이용 시 웨딩홀 1층에서 주차 등록</p>
+                    <p className='text-body-ps color-b-0'>주차장 만차 시 근처 이대서울병원 주차장 이용</p>
+                    <p className='text-body-ps color-b-0'>이대서울병원 주차장 이용 시 웨딩홀 1층에서 주차 등록</p>
                 </div> {/* .location__detail : end */}
             </div> {/* .location__details : end */}
         </div>

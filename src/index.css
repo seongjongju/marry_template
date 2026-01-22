@@ -22,11 +22,11 @@
 .title {font-family: 'Baskervville SC'; font-size: 22px; color: var(--color-b-1); text-align: center;
 margin-bottom: 10%; font-weight: 400;}
 
-
+.text-body-ps {position: relative; font-size: 10px; line-height: 1.6; word-break: keep-all; padding-left: 10px;}
+.text-body-ps::before {position: absolute; content: '*'; top: 0; left: 0;}
 
 /** text option **/
-.text-body-0.ps {position: relative; padding-left: 12px;}
-.text-body-0.ps::before {position: absolute; content: '*'; top: 0; left: 0;}
+
 
 /*** text-align ***/
 .text-center {text-align: center;}
@@ -39,7 +39,12 @@ margin-bottom: 10%; font-weight: 400;}
 
 .color-g-0 {color: var(--color-g-0);}
 
+.color-r-0 {color: var(--color-r-0);}
+
 /*** gap ***/
+/** title-gap **/
+.title-gap-0 {margin-bottom: 40px;}
+
 /** text-gap **/
 .text-gap-0 {margin-bottom: 8px;}
 
@@ -136,20 +141,30 @@ border: 1px solid var(--color-g-0); border-radius: 12px; font-size: 16px; gap: 8
 
 .location__detail {padding: 0 3%; margin-bottom: 60px;}
 .location__detail:last-child {margin-bottom: 0;}
-.location__title {font-size: 16px; color: var(--color-b-0); padding-bottom: 10px; margin-bottom: 10px;
+.location__title {font-size: 14px; color: var(--color-b-0); padding-bottom: 10px; margin-bottom: 10px;
 border-bottom: 1px solid var(--color-g-1);}
 
 .location__list--item {display: flex; align-items: flex-start; gap: 10px; margin-bottom: 5px;}
 .location__list--item:last-child {margin-bottom: 0;}
-.location__text {font-size: 14px; color: var(--color-b-0); position: relative;}
-.location__text:first-child {width: 45px; white-space: nowrap;}
-.location__text:last-child {width: calc(100% - 55px); word-break: keep-all;}
+.location__text {font-size: 12px; color: var(--color-b-0); position: relative;}
+.location__text:first-child {width: 40px; white-space: nowrap;}
+.location__text:last-child {width: calc(100% - 50px); word-break: keep-all;}
 
-.location__text:first-child::after {position: absolute; content: ''; top: 1px; right: -0.5px; width: 1px; height: 16px;
+.location__text:first-child::after {position: absolute; content: ''; top: 1px; right: -0.5px; width: 1px; height: 14px;
 background: var(--color-b-1);}
 
-.location__text.long:first-child {width: 100px;}
-.location__text.long:last-child {width: calc(100% - 110px);}
+.location__text.long:first-child {width: 95px;}
+.location__text.long:last-child {width: calc(100% - 105px);}
 
-.location__detail .text-body-0 {color: var(--color-b-0); line-height: 1.6;}
+/*** Impart ***/
+.remittance {display: flex; flex-direction: column; gap: 8px; margin: 30px auto 60px; padding-bottom: 40px;
+border-bottom: 1px solid var(--color-g-1);}
+.remittance__button {display: flex; align-items: center; justify-content: center;
+width: 100%; height: 48px; font-size: 14px; border-radius: 10px; border: 1px solid var(--color-g-0);
+background: var(--color-w-0);}
+
+.share {display: flex; flex-direction: column; align-items: center; gap: 16px;}
+.share__button {display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 16px;
+color: var(--color-b-0);}
+
 
