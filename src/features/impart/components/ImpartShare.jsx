@@ -8,17 +8,24 @@ const ImpartShare = () => {
     const {handleCopyClipBoard} = useClipBoard();
     const {handleClickShare} = useShare();
 
+    const userAgent = navigator.userAgent.toLowerCase();
+
     return (
         <div className='share' ref={app}>
             <div className='share__btns' ref={shares}>
-                <button
-                    className='share__button'
-                    href="#self"
-                    onClick={handleClickShare}
-                >
-                    <img src="/icons/kakao_ico.svg" alt="카카오톡 아이콘" />
-                    카카오톡으로 공유하기
-                </button>
+                {
+                    userAgent.includes('iphone') || userAgent.includes('ipad') &&
+                    (
+                        <button
+                            className='share__button'
+                            href="#self"
+                            onClick={handleClickShare}
+                        >
+                            <img src="/icons/kakao_ico.svg" alt="카카오톡 아이콘" />
+                            카카오톡으로 공유하기
+                        </button>   
+                    )
+                }
                 <a 
                     className='share__button'
                     href="#self"

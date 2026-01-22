@@ -25,6 +25,9 @@ const useGsap = () => {
     const remittance = useRef();
     const shares = useRef([]);
 
+    //디데이
+    const timer = useRef(); 
+
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
             //타이틀
@@ -215,6 +218,21 @@ const useGsap = () => {
                     );
                 });
             }
+
+            //디데이
+            if (timer.current) {
+                gsap.fromTo(timer.current, 
+                    {y:30, opacity:0},
+                    { 
+                        y:0, opacity: 1, duration: 0.7, ease: 'power2.out',
+                        scrollTrigger:{
+                            trigger: timer.current,
+                            start:"top 70%",
+                            toggleActions:"play none none none"
+                        }
+                    }
+                ); 
+            }
         }, app); 
         
         return () => ctx.revert();
@@ -233,7 +251,8 @@ const useGsap = () => {
         map,
         locationDetails,
         remittance,
-        shares
+        shares,
+        timer
     };
 };
 

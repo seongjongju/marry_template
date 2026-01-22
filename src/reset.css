@@ -128,7 +128,7 @@
 }
 
 html {
-    background-color: #f5f5f5;
+    background-color: #fafafa;
     padding-top: env(safe-area-inset-top);
     padding-bottom: env(safe-area-inset-bottom);
     padding-left: env(safe-area-inset-left);
@@ -137,7 +137,7 @@ html {
 
 body {
     font-family: 'Sumunjang_BodyM';
-    background: #fff;
+    background: #fafafa;
     max-width: 600px;
     margin: 0 auto;
     padding-top: env(safe-area-inset-top);
