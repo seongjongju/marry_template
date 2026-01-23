@@ -9,8 +9,8 @@ export default defineConfig(({ mode }) => {
   const bName = env.VITE_APP_BRIDE;
 
   const firstName = {
-    bridegroom: bgName.replace(/ /g, "").slice(1, 3),
-    bride: bName.replace(/ /g, "").slice(1, 3),
+    bridegroom: (bgName || "").replace(/ /g, "").slice(1, 3),
+    bride: (bName || "").replace(/ /g, "").slice(1, 3),
   };
 
   const weddingDate = `${env.VITE_APP_YEAR}년 ${env.VITE_APP_MONTH}월 ${env.VITE_APP_DAY}일 ${env.VITE_APP_WEEK}`;
