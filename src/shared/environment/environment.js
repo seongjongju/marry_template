@@ -1,5 +1,5 @@
 //url
-export const appUrl = "https://marry-a.pages.dev/";
+export const appUrl = import.meta.env.VITE_APP_URL;
 
 //날짜
 export const year = import.meta.env.VITE_APP_YEAR;

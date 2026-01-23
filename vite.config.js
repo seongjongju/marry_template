@@ -26,7 +26,7 @@ export default defineConfig(({ mode }) => {
             ogTitle: `${firstName.bridegroom} ♥ ${firstName.bride} 결혼합니다!`,
             ogSiteName: `${firstName.bridegroom} ♥ ${firstName.bride} 결혼합니다!`,
             ogDescription: weddingDate,
-            ogUrl: env.VITE_APP_URL || "https://marry-a.pages.dev/"
+            ogUrl: env.VITE_APP_URL,
           },
         },
       }),
