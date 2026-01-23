@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Lettering from '../svg/Lettering';
+import { bride, bridegroom, day, month, placeFloor, placeHall, placeName, time, week, year } from '../../shared/environment/environment';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -27,13 +28,13 @@ const Visual = () => {
             <div className='inner'>
                 <div className='visual__detail'>
                     <div className='visual__client'>
-                        <p className='visual__name'>허수경</p>
+                        <p className='visual__name'>{bridegroom}</p>
                         <span className='visual__and'>그리고</span>
-                        <p className='visual__name'>김경윤</p>
+                        <p className='visual__name'>{bride}</p>
                     </div>
                     <p className='text-body-1'>
-                        2026.06.14 일요일 PM 12:10 <br />
-                        더뉴컨벤션 2층 더뉴홀
+                        {year}.{month}.{day} {week} {time} <br />
+                        {placeName} {placeFloor} {placeHall}
                     </p>
                 </div>
             </div>

@@ -18,8 +18,9 @@
     - 지도
     - T맵 연결
     - Kakao 내비게이션 연결
+    - 네이버 지도 연결
 
-7. 계좌번호 및 화환보내기 
+7. 계좌번호
     - 계좌번호 클립보드
 
 8. 공유 하기
@@ -39,5 +40,6 @@
 - photoswipe
 - gsap
 - framer-motion
+- vite-plugin-html
 
 

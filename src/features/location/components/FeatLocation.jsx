@@ -1,6 +1,7 @@
 import React from 'react';
 import useGsap from '../../gsap/hook/useGsap';
 import useClipBoard from '../../clipBoard/hook/useClipBoard';
+import { appUrl, lat, long, place, placeName, placeTel } from '../../../shared/environment/environment';
 
 const FeatLocation = () => {
     const {app, locationBtns, map, locationDetails } = useGsap();
@@ -9,9 +10,9 @@ const FeatLocation = () => {
     //티맵
     const handleOpenTmap = (e) => {
         // 목적지 설정 (예: 코엑스)
-        const name = encodeURIComponent('더 뉴컨벤션');
-        const x = '126.8368847974'; // 경도 (Longitude)
-        const y = '37.5562637915563';  // 위도 (Latitude)
+        const name = encodeURIComponent(placeName);
+        const x = long; // 경도 (Longitude)
+        const y = lat;  // 위도 (Latitude)
         
         // 티맵 앱 연동 스키마
         const tmapUrl = `tmap://search?name=${name}&posx=${x}&posy=${y}`;
@@ -38,9 +39,9 @@ const FeatLocation = () => {
 
     // 카카오내비
     const handleOpenKakaoNavi = (e) => {
-        const name = '더 뉴컨벤션';
-        const x = '126.8368847974'; // 경도 (Longitude)
-        const y = '37.5562637915563';  // 위도 (Latitude)
+        const name = placeName;
+        const x = long; // 경도 (Longitude)
+        const y = lat;  // 위도 (Latitude)
         
         const kakaoNaviUrl = `https://map.kakao.com/link/to/${name},${y},${x}`;
         
@@ -52,19 +53,50 @@ const FeatLocation = () => {
         }
     };
 
+    // 네이버지도
+    const handleOpenNaverMap = () => {
+        const name = encodeURIComponent(placeName);
+        const x = long; // 경도 (Longitude)
+        const y = lat;  // 위도 (Latitude)
+        const appName = appUrl; // 본인의 번들 ID/패키지명
+        
+        const openNaverMap = () => {
+            // 1. 네이버 지도 앱 실행 시도 (길찾기)
+            const scheme = `nmap://route/car?dlat=${y}&dlng=${x}&dname=${encodeURIComponent(name)}&appname=${appName}`;
+            
+            // 2. 앱이 없을 경우를 대비한 대체 웹 URL (모바일웹)
+            const webUrl = `https://m.place.naver.com/place/35751363/home${encodeURIComponent(name)}`;
+
+            // 모바일 환경 체크 후 처리
+            if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+                window.location.href = scheme;
+            
+            // 앱이 설치되어 있지 않을 경우(짧은 시간 후) 웹으로 이동
+            setTimeout(() => {
+                window.location.href = webUrl;
+            }, 500);
+            } else {
+                // 데스크탑 환경일 경우 웹으로 바로 이동
+                window.open(webUrl, '_blank');
+            }
+        };
+
+        openNaverMap();
+    };
+
     return (
         <div className='location' ref={app}>
             <div className='location__btns' ref={locationBtns}>
                 <a 
                     href='#self' 
                     className='location__button'
-                    onClick={() => handleCopyClipBoard('서울특별시 강서구 공항대로36길 57')}
+                    onClick={() => handleCopyClipBoard(place)}
                 >
                     <img src="/icons/location_marker_ico.svg" alt="지도마커" />
                     지도
                 </a>
                 <a 
-                    href='tel:02-1661-3303' 
+                    href={`tel:${placeTel}`} 
                     className='location__button'
                 >
                     <img src="/icons/location_tel_ico.svg" alt="전화걸기" />
@@ -95,6 +127,13 @@ const FeatLocation = () => {
                         className="location__road--button"
                     >
                         카카오내비
+                    </a>
+                    <a 
+                        href="#self" 
+                        onClick={handleOpenNaverMap}
+                        className="location__road--button"
+                    >
+                        네이버지도
                     </a>
                 </div> {/* .location__road : end */}
             </div> {/* .map : end */}

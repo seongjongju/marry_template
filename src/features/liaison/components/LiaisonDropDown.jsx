@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { brideDad, brideDadTel, bridegroomDad, bridegroomDadTel, bridegroomMom, bridegroomMomTel, brideMom, brideMomTel } from '../../../shared/environment/environment';
 
 const LiaisonDropDown = () => {
     const [dropdown, setDropdown] = useState(false);
@@ -30,26 +31,26 @@ const LiaisonDropDown = () => {
                     <p className='text-body-0'>신랑 측 혼주</p>
                     <div className='parents-liaison__parent'>
                         <p className='parents-liaison__name'>
-                            <span>아버지</span> 김땡땡
+                            <span>아버지</span> {bridegroomDad}
                         </p>
                         <div className='liaison__icons'>
-                            <a href="tel:010-8690-3363">
+                            <a href={`tel:${bridegroomDadTel}`}>
                                 <img src="/icons/tel_ico.svg" alt="전화" className='liaison__icon' />
                             </a>
-                            <a href="sms:010-8690-3363">
+                            <a href={`sms:${bridegroomDadTel}`}>
                                 <img src="/icons/sms_ico.svg" alt="문자" className='liaison__icon' />
                             </a>
                         </div>
                     </div> {/* .parents-liaison__parent : end */}
                     <div className='parents-liaison__parent'>
                         <p className='parents-liaison__name'>
-                            <span>어머니</span> 김땡땡
+                            <span>어머니</span> {bridegroomMom}
                         </p>
                         <div className='liaison__icons'>
-                            <a href="tel:010-8690-3363">
+                            <a href={`tel:${bridegroomMomTel}`}>
                                 <img src="/icons/tel_ico.svg" alt="전화" className='liaison__icon' />
                             </a>
-                            <a href="sms:010-8690-3363">
+                            <a href={`sms:${bridegroomMomTel}`}>
                                 <img src="/icons/sms_ico.svg" alt="문자" className='liaison__icon' />
                             </a>
                         </div>
@@ -60,26 +61,26 @@ const LiaisonDropDown = () => {
                     <p className='text-body-0'>신부 측 혼주</p>
                     <div className='parents-liaison__parent'>
                         <p className='parents-liaison__name'>
-                            <span>아버지</span> 김뿅뿅
+                            <span>아버지</span> {brideDad}
                         </p>
                         <div className='liaison__icons'>
-                            <a href="tel:010-8690-3363">
+                            <a href={`tel:${brideDadTel}`}>
                                 <img src="/icons/tel_ico.svg" alt="전화" className='liaison__icon' />
                             </a>
-                            <a href="sms:010-8690-3363">
+                            <a href={`sms:${brideDadTel}`}>
                                 <img src="/icons/sms_ico.svg" alt="문자" className='liaison__icon' />
                             </a>
                         </div>
                     </div> {/* .parents-liaison__parent : end */}
                     <div className='parents-liaison__parent'>
                         <p className='parents-liaison__name'>
-                            <span>어머니</span> 김뿅뿅
+                            <span>어머니</span> {brideMom}
                         </p>
                         <div className='liaison__icons'>
-                            <a href="tel:010-8690-3363">
+                            <a href={`tel:${brideMomTel}`}>
                                 <img src="/icons/tel_ico.svg" alt="전화" className='liaison__icon' />
                             </a>
-                            <a href="sms:010-8690-3363">
+                            <a href={`sms:${brideMomTel}`}>
                                 <img src="/icons/sms_ico.svg" alt="문자" className='liaison__icon' />
                             </a>
                         </div>

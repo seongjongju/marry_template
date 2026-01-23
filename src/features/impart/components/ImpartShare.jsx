@@ -3,6 +3,7 @@ import { isIOS } from 'react-device-detect';
 import useClipBoard from '../../clipBoard/hook/useClipBoard';
 import useShare from '../../share/hook/useShare';
 import useGsap from '../../gsap/hook/useGsap';
+import { appUrl } from '../../../shared/environment/environment';
 
 const ImpartShare = () => {
     const {app, shares} = useGsap();
@@ -28,7 +29,7 @@ const ImpartShare = () => {
                 <a 
                     className='share__button'
                     href="#self"
-                    onClick={() => {handleCopyClipBoard('https://marrya.netlify.app/')}} 
+                    onClick={() => {handleCopyClipBoard(appUrl)}} 
                 >
                     <img src="/icons/share_ico.svg" alt="공유 아이콘" className='share__icon share' />
                     청첩장 주소 복사하기

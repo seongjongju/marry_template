@@ -4,13 +4,14 @@ import isLeapYear from 'dayjs/plugin/isLeapYear';
 import 'dayjs/locale/ko';
 import SlideNumber from './SlideNumber';
 import useGsap from '../../gsap/hook/useGsap';
+import { day, month, realTime, year } from '../../../shared/environment/environment';
 
 dayjs.extend(isLeapYear);
 dayjs.locale('ko')
 
 const DdayTimer = () => {
     const {timer} = useGsap();
-    const targetDate = dayjs('2026-06-14 23:59:59'); // 목표 날짜 설정
+    const targetDate = dayjs(`${year}-${month}-${day} ${realTime}`); // 목표 날짜 설정
     const [timeLeft, setTimeLeft] = useState({
         days: 0,
         hours: 0,

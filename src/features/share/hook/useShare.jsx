@@ -1,9 +1,10 @@
 import React from 'react';
+import { appUrl } from '../../../shared/environment/environment';
 
 const useShare = () => {
     const handleClickShare = async () => {
         const shareData = {
-            url: "https://marrya.netlify.app/"
+            url: appUrl
         };
 
         try{
@@ -18,7 +19,7 @@ const useShare = () => {
             
             // 실제 공유 로직
             await navigator.share({
-                url: "https://marrya.netlify.app/"
+                url: appUrl
             });
         } catch(error) {
             console.error(error);
