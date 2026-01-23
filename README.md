@@ -38,6 +38,7 @@
 - react-device-detect
 - react-photoswipe-gallery
 - photoswipe
+- react-calendar
 - gsap
 - framer-motion
 - vite-plugin-html

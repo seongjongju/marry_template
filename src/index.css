@@ -106,15 +106,21 @@ transition: max-height .5s;}
 
 .parents-liaison .liaison__icon {width: 24px;}
 
-/*** Calendar ***/
-.calendar {display: grid; grid-template-columns: repeat(7, 1fr); row-gap: 32px; max-width: 410px; margin: 0 auto; padding: 0 10px;}
-.calendar__day {display: flex; align-items: center; justify-content: center; font-size: 14px; position: relative;}
-.calendar__day.not-current-month {color: var(--color-g-0);}
+/*** Calendars ***/
+.calendars {max-width: 410px; margin: 0 auto; padding: 0 10px;}
+.react-calendar {width: 100% !important; border: none !important; background: none !important;}
+.react-calendar__navigation {display: none !important;}
+abbr[title] {text-decoration: none; font-weight: 400; font-size: 11px;}
+abbr[title=Sunday] {color: var(--color-r-0);}
 
-.calendar__week {display: flex; align-items: center; justify-content: center; font-size: 11px;}
-.calendar__week.sunday {color: var(--color-r-0);}
+.react-calendar__month-view__days__day {font-size: 14px !important; color: #000 !important;
+padding-top: 16px !important; padding-bottom: 16px !important; cursor: auto !important; pointer-events: none !important;}
+.react-calendar__month-view__days__day:hover {background: none !important;}
 
-.d-day {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px;}
+.react-calendar__tile--active {background: none !important; position: relative;}
+.react-calendar__tile--active img {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 55px;} 
+
+.react-calendar__month-view__days__day--neighboringMonth {color: var(--color-g-0) !important;}
 
 /*** Dday ***/
 /** 1번 타입 **/
@@ -178,7 +184,7 @@ border: 1px solid var(--color-g-0); border-radius: 12px; font-size: 14px; gap: 8
 .location__button img {width: 18px;}
 
 .location__road {display: flex; align-items: center; justify-content: center; gap: 20px; margin-top: 15px;}
-.location__road--button {font-family: 'Pretendard'; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 14px;}
+.location__road--button {font-family: 'Pretendard'; display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 14px;}
 
 .location__detail {padding: 0 3%; margin-bottom: 60px;}
 .location__detail:last-child {margin-bottom: 0;}

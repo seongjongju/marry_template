@@ -119,6 +119,7 @@ const FeatLocation = () => {
                         onClick={handleOpenTmap}
                         className="location__road--button"
                     >
+                        <img src="/icons/tmap_ico.svg" alt="티맵" />
                         티맵
                     </a>
                     <a 
@@ -126,6 +127,7 @@ const FeatLocation = () => {
                         onClick={handleOpenKakaoNavi}
                         className="location__road--button"
                     >
+                        <img src="/icons/kakao_navi_ico.svg" alt="카카오내비" />
                         카카오내비
                     </a>
                     <a 
@@ -133,6 +135,7 @@ const FeatLocation = () => {
                         onClick={handleOpenNaverMap}
                         className="location__road--button"
                     >
+                        <img src="/icons/naver_map_ico.svg" alt="네이버지도" />
                         네이버지도
                     </a>
                 </div> {/* .location__road : end */}
