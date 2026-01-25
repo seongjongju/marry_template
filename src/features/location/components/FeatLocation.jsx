@@ -1,7 +1,7 @@
 import React from 'react';
 import useGsap from '../../gsap/hook/useGsap';
 import useClipBoard from '../../clipBoard/hook/useClipBoard';
-import { appUrl, lat, long, place, placeName, placeTel } from '../../../shared/environment/environment';
+import { appUrl, lat, long, place, placeMap, placeName, placeTel } from '../../../shared/environment/environment';
 
 const FeatLocation = () => {
     const {app, locationBtns, map, locationDetails } = useGsap();
@@ -107,7 +107,7 @@ const FeatLocation = () => {
                 <iframe 
                     style={{ border: "none" }}
                     title="google-map"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.9393824348476!2d126.83438857632291!3d37.556491924703344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9c68bfb5c69f%3A0x220458f873585ae1!2z642U64m07Luo67Kk7IWY7Juo65Sp!5e0!3m2!1sko!2skr!4v1769000968228!5m2!1sko!2skr" 
+                    src={placeMap} 
                     width="100%" 
                     height="100%"  
                     referrerPolicy="no-referrer-when-downgrade"
