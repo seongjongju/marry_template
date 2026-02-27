@@ -113,6 +113,8 @@ transition: max-height .5s;}
 abbr[title] {text-decoration: none; font-weight: 400; font-size: 11px;}
 abbr[title=Sunday] {color: var(--color-r-0);}
 
+.react-calendar__tile--now {background: none !important;}
+
 .react-calendar__month-view__days__day {font-size: 14px !important; color: #000 !important;
 padding-top: 16px !important; padding-bottom: 16px !important; cursor: auto !important; pointer-events: none !important;}
 .react-calendar__month-view__days__day:hover {background: none !important;}

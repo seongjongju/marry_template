@@ -1,9 +1,9 @@
 import React from 'react';
 import { isIOS } from 'react-device-detect';
-import useClipBoard from '../../clipBoard/hook/useClipBoard';
-import useShare from '../../share/hook/useShare';
-import useGsap from '../../gsap/hook/useGsap';
-import { appUrl } from '../../../shared/environment/environment';
+import useClipBoard from '../../features/hooks/clipBoard/useClipBoard';
+import useShare from '../../features/hooks/share/useShare';
+import useGsap from '../../features/hooks/gsap/useGsap';
+import { appUrl } from '../../shared/environment/environment';
 
 const ImpartShare = () => {
     const {app, shares} = useGsap();

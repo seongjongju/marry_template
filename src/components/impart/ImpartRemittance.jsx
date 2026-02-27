@@ -1,7 +1,7 @@
 import React from 'react';
-import useClipBoard from '../../clipBoard/hook/useClipBoard';
-import useGsap from '../../gsap/hook/useGsap';
-import { brideAccount, bridegroomAccount } from '../../../shared/environment/environment';
+import useClipBoard from '../../features/hooks/clipBoard/useClipBoard';
+import useGsap from '../../features/hooks/gsap/useGsap';
+import { brideAccount, bridegroomAccount } from '../../shared/environment/environment';
 
 const ImpartRemittance = () => {
     const {remittance} = useGsap();

@@ -3,8 +3,8 @@ import dayjs from 'dayjs';
 import isLeapYear from 'dayjs/plugin/isLeapYear';
 import 'dayjs/locale/ko';
 import SlideNumber from './SlideNumber';
-import useGsap from '../../gsap/hook/useGsap';
-import { day, month, realTime, year } from '../../../shared/environment/environment';
+import useGsap from '../../features/hooks/gsap/useGsap';
+import { day, month, realTime, year } from '../../shared/environment/environment';
 
 dayjs.extend(isLeapYear);
 dayjs.locale('ko')

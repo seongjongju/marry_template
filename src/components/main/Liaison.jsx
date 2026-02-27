@@ -1,6 +1,6 @@
 import React from 'react';
-import LiaisonDropDown from '../../features/liaison/components/LiaisonDropDown';
-import useGsap from '../../features/gsap/hook/useGsap';
+import LiaisonDropDown from '../liaison/LiaisonDropDown';
+import useGsap from '../../features/hooks/gsap/useGsap';
 import { bride, bridegroom, bridegroomTel, brideTel } from '../../shared/environment/environment';
 
 const Liaison = () => {
@@ -19,7 +19,7 @@ const Liaison = () => {
                             <a href={`tel:${bridegroomTel}`}>
                                 <img src="/icons/tel_ico.svg" alt="전화" />
                             </a>
-                            <a href={`sms:${brideTel}`}>
+                            <a href={`sms:${bridegroomTel}`}>
                                 <img src="/icons/sms_ico.svg" alt="문자" />
                             </a>
                         </div>

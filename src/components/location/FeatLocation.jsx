@@ -1,7 +1,7 @@
 import React from 'react';
-import useGsap from '../../gsap/hook/useGsap';
-import useClipBoard from '../../clipBoard/hook/useClipBoard';
-import { appUrl, lat, long, place, placeMap, placeName, placeTel } from '../../../shared/environment/environment';
+import { appUrl, lat, long, place, placeMap, placeName, placeTel } from '../../shared/environment/environment';
+import useGsap from '../../features/hooks/gsap/useGsap';
+import useClipBoard from '../../features/hooks/clipBoard/useClipBoard';
 
 const FeatLocation = () => {
     const {app, locationBtns, map, locationDetails } = useGsap();
@@ -49,7 +49,7 @@ const FeatLocation = () => {
             e.currentTarget.href = kakaoNaviUrl;
         } else {
             e.preventDefault();
-            alert('모바일 기기에서만 티맵 앱을 실행할 수 있습니다.');
+            alert('모바일 기기에서만 카카오내비 앱을 실행할 수 있습니다.');
         }
     };
 

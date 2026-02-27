@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import useGsap from '../../features/gsap/hook/useGsap';
+import useGsap from '../../features/hooks/gsap/useGsap';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import { day, month, year } from '../../shared/environment/environment';

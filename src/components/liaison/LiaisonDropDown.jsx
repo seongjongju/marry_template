@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { brideDad, brideDadTel, bridegroomDad, bridegroomDadTel, bridegroomMom, bridegroomMomTel, brideMom, brideMomTel } from '../../../shared/environment/environment';
+import { brideDad, brideDadTel, bridegroomDad, bridegroomDadTel, bridegroomMom, bridegroomMomTel, brideMom, brideMomTel } from '../../shared/environment/environment';
 
 const LiaisonDropDown = () => {
     const [dropdown, setDropdown] = useState(false);

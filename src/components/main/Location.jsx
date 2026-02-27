@@ -1,7 +1,7 @@
 import React from 'react';
-import useGsap from '../../features/gsap/hook/useGsap';
-import FeatLocation from '../../features/location/components/FeatLocation';
+import useGsap from '../../features/hooks/gsap/useGsap';
 import { place, placeFloor, placeHall, placeName, placeTel } from '../../shared/environment/environment';
+import FeatLocation from '../location/FeatLocation';
 
 const Location = () => {
     const {app, title, textBody_1, textBody_0} = useGsap();

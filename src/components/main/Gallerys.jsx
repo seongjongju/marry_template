@@ -1,6 +1,6 @@
 import React from 'react';
-import PhotoGallery from '../../features/gallerys/components/PhotoGallery';
-import useGsap from '../../features/gsap/hook/useGsap';
+import PhotoGallery from '../gallerys/PhotoGallery';
+import useGsap from '../../features/hooks/gsap/useGsap';
 const images = [
     { original: '/images/gallery_img0.jpg', thumbnail: '/images/gallery_img0.jpg', alt: 'gallery_img0' },
     { original: '/images/gallery_img1.jpg', thumbnail: '/images/gallery_img1.jpg', alt: 'gallery_img1' },

@@ -1,7 +1,7 @@
 import React from 'react';
-import ImpartRemittance from '../../features/impart/components/ImpartRemittance';
-import ImpartShare from '../../features/impart/components/ImpartShare';
-import useGsap from '../../features/gsap/hook/useGsap';
+import ImpartRemittance from '../impart/ImpartRemittance';
+import ImpartShare from '../impart/ImpartShare';
+import useGsap from '../../features/hooks/gsap/useGsap';
 
 const Impart = () => {
     const {app, title, textBody_1} = useGsap();
