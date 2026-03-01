@@ -1,5 +1,5 @@
 //url
-export const appUrl = "https://marry-a.pages.dev/";
+export const appUrl = "https://gyeongyun-sugyeong.pages.dev/";
 
 //날짜
 export const year = "2026";
