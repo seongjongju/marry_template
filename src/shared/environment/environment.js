@@ -31,7 +31,7 @@ export const bridegroomMomTel = "010-6349-4700";
 //신부측 정보
 export const bride = "허 수 경";
 export const brideTel = "010-8643-5177";
-export const brideAccount = "국민은행 4541010206591";
+export const brideAccount = "국민은행 45410101206591";
 export const brideDad = "허재영";
 export const brideMom = "염정임";
 export const brideDadTel = "010-9286-2177";

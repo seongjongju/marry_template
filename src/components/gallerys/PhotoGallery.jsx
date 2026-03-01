@@ -1,6 +1,7 @@
 import React from 'react';
 import 'photoswipe/dist/photoswipe.css';
 import { Gallery, Item } from 'react-photoswipe-gallery';
+import { aspectRatio } from 'framer-motion';
 
 const PhotoGallery = ({ images }) => {
     return (
@@ -11,16 +12,21 @@ const PhotoGallery = ({ images }) => {
                         key={index} 
                         original={img.original}
                         thumbnail={img.thumbnail}
-                        width={400}
-                        height={534}
+                        width={img.width}
+                        height={img.height}
                         alt={img.alt}
                     >
                         {({ ref, open }) => (
                             <img
+                                className={`gallery-${index}`}
                                 ref={ref}
                                 onClick={open}
                                 src={img.thumbnail}
-                                style={{ cursor: 'pointer', width: '100%', height: 'auto' }}
+                                style={{
+                                    cursor: 'pointer', 
+                                    width: '100%', 
+                                    height: '100%' 
+                                }}
                                 alt={img.alt}
                             />
                         )}
