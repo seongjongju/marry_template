@@ -22,17 +22,26 @@ export const lat = "37.5562637915563"; //위도
 //신랑측 정보
 export const bridegroom = "김 경 윤";
 export const bridegroomTel = "010-6359-4700";
-export const bridegroomAccount = "국민은행 96359470055";
+export const bridegroomAccount = "국민은행 963-59-470055";
+
 export const bridegroomDad = "김종필";
-export const bridegroomMom = "오석자";
 export const bridegroomDadTel = "010-2365-4700";
+export const bridegroomDadAccount = "국민은행 4570-0101-016483";
+
+export const bridegroomMom = "오석자";
 export const bridegroomMomTel = "010-6349-4700";
+export const bridegroomMomAccount = "하나은행 369-910377-62607"
+
 
 //신부측 정보
 export const bride = "허 수 경";
 export const brideTel = "010-8643-5177";
-export const brideAccount = "국민은행 45410101206591";
+export const brideAccount = "국민은행 454-101-01206591";
+
 export const brideDad = "허재영";
-export const brideMom = "염정임";
 export const brideDadTel = "010-9286-2177";
+export const brideDadAccount = "하나은행 132-247-57900207";
+
+export const brideMom = "염정임";
 export const brideMomTel = "010-5260-2177";
+export const brideMomAccount = "우리은행 1002-136-619987";

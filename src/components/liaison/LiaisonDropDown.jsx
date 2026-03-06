@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { brideDad, brideDadTel, bridegroomDad, bridegroomDadTel, bridegroomMom, bridegroomMomTel, brideMom, brideMomTel } from '../../shared/environment/environment';
 
 const LiaisonDropDown = () => {
-    const [dropdown, setDropdown] = useState(false);
+    //const [dropdown, setDropdown] = useState(false);
 
     return (
         <div>
-            <button 
+            {/* <button 
                 className='parents-liaison-button'
                 onClick={() => setDropdown(prev => !prev)}
             >
@@ -15,17 +15,11 @@ const LiaisonDropDown = () => {
                     src="/icons/dropdown_arrow.svg"
                     alt="드롭다운 화살표" 
                     className='parents-liaison-button__arrow'
-                    style={{
-                        transform: dropdown ? "rotateX(180deg)" : "rotateX(0deg)"
-                    }}
                 />
-            </button>
+            </button> */}
 
             <div 
                 className='parents-liaison'
-                style={{
-                    maxHeight: dropdown ? "200px" : 0
-                }}
             >
                 <div className='parents-liaison__item'>
                     <p className='text-body-0'>신랑 측 혼주</p>
