@@ -28,12 +28,12 @@ const Remittance = ({ celebrant, names, accounts }) => {
                 </p>
                 <div className='remittance__clip'>
                     <p className='text-body-1 color-b-0'>{accounts.myAccount.replace(' ', '\u3000'.repeat(1))}</p>
-                    <button 
+                    <a href='#self' 
                         className='remittance__button'
                         onClick={() => handleCopyClipBoard(accounts.myAccount)}
                     >
                         복사하기
-                    </button>
+                    </a>
                 </div>
             </div> 
             <div className='remittance__item'>
@@ -42,12 +42,12 @@ const Remittance = ({ celebrant, names, accounts }) => {
                 </p>
                 <div className='remittance__clip'>
                     <p className='text-body-1 color-b-0'>{accounts.dadAcount.replace(' ', '\u3000'.repeat(1))}</p>
-                    <button 
+                    <a href='#self' 
                         className='remittance__button'
                         onClick={() => handleCopyClipBoard(accounts.dadAcount)}
                     >
                         복사하기
-                    </button>
+                    </a>
                 </div>
             </div> 
             <div className='remittance__item'>
@@ -56,12 +56,13 @@ const Remittance = ({ celebrant, names, accounts }) => {
                 </p>
                 <div className='remittance__clip'>
                     <p className='text-body-1 color-b-0'>{accounts.momAcount.replace(' ', '\u3000'.repeat(1))}</p>
-                    <button 
+                    <a
+                        href='#self' 
                         className='remittance__button'
                         onClick={() => handleCopyClipBoard(accounts.momAcount)}
                     >
                         복사하기
-                    </button>
+                    </a>
                 </div>
             </div> 
         </div>

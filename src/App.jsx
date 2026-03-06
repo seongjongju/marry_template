@@ -9,19 +9,19 @@ import Visual from './components/visual/Visual'
 import Footer from './components/footer/Footer'
 
 //우클릭 차단
-//document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('contextmenu', e => e.preventDefault());
 
 //개발자도구 차단
-// document.addEventListener('keydown', e => {
-//   if (
-//       e.key === 'F12' ||
-//       (e.ctrlKey && e.shiftKey && ['I','J','C'].includes(e.key)) ||
-//       (e.ctrlKey && e.key === 'U')
-//   ) {
-//     e.preventDefault();
-//     alert('보안정책 상 해당 단축키는 사용이 금지되었습니다.');
-//   }
-// });
+document.addEventListener('keydown', e => {
+  if (
+      e.key === 'F12' ||
+      (e.ctrlKey && e.shiftKey && ['I','J','C'].includes(e.key)) ||
+      (e.ctrlKey && e.key === 'U')
+  ) {
+    e.preventDefault();
+    alert('보안정책 상 해당 단축키는 사용이 금지되었습니다.');
+  }
+});
 
 function App() {
   return (
