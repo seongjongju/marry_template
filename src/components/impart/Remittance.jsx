@@ -27,7 +27,7 @@ const Remittance = ({ celebrant, names, accounts }) => {
                     <span>{celebrant}</span> {names.myName.replace(/ /g,"")}
                 </p>
                 <div className='remittance__clip'>
-                    <p className='text-body-1 color-b-0'>{accounts.myAccount.replace(' ', '\u3000'.repeat(1))}</p>
+                    <p className='text-body-0 color-b-0'>{accounts.myAccount.replace(' ', '\u3000'.repeat(1))}</p>
                     <a href='#self' 
                         className='remittance__button'
                         onClick={() => handleCopyClipBoard(accounts.myAccount)}
@@ -41,7 +41,7 @@ const Remittance = ({ celebrant, names, accounts }) => {
                     <span>{celebrant} 아버지</span> {names.dadName}
                 </p>
                 <div className='remittance__clip'>
-                    <p className='text-body-1 color-b-0'>{accounts.dadAcount.replace(' ', '\u3000'.repeat(1))}</p>
+                    <p className='text-body-0 color-b-0'>{accounts.dadAcount.replace(' ', '\u3000'.repeat(1))}</p>
                     <a href='#self' 
                         className='remittance__button'
                         onClick={() => handleCopyClipBoard(accounts.dadAcount)}
@@ -55,7 +55,7 @@ const Remittance = ({ celebrant, names, accounts }) => {
                     <span>{celebrant} 어머니</span> {names.momName}
                 </p>
                 <div className='remittance__clip'>
-                    <p className='text-body-1 color-b-0'>{accounts.momAcount.replace(' ', '\u3000'.repeat(1))}</p>
+                    <p className='text-body-0 color-b-0'>{accounts.momAcount.replace(' ', '\u3000'.repeat(1))}</p>
                     <a
                         href='#self' 
                         className='remittance__button'
