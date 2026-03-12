@@ -55,10 +55,10 @@ margin-bottom: 10%; font-weight: 400;}
 
 
 /************************* visual */
-#visual {width: 100%; height: 100vh; background: url(/images/visual_img.jpg) no-repeat 55% / cover; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding-bottom: 100px;}
+#visual {width: 100%; height: 100vh; background: url(/images/visual_img.jpg) no-repeat 55% / cover; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding-bottom: 60px;}
 
 #visual::before {position: absolute; content: ''; top: 0; left: 0; width: 100%; height: 100%;
-background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.8));}
+background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, transparent 50%, rgba(0,0,0,0.8) 100%);}
 
 #visual p,
 #visual span {color: var(--color-w-0);}
@@ -77,6 +77,8 @@ padding: 20px;}
 .letterings svg:first-child {width: 69.5313vw; height: 22.0313vw; max-width: 445px; max-height: 141px;}
 .letterings svg:last-child {width: 44.8438vw; height: 17.8125vw; margin-left: auto; margin-top: -20px; max-width: 287px;
 max-height: 114px;}
+
+.letterings2 {display: block; width: 97%; margin: 0 auto;}
 
 /*********************** contents */
 /*** common ***/
@@ -235,6 +237,6 @@ color: var(--color-b-0); border: 1px solid var(--color-g-0); width: 100%; height
 footer {padding: 100px 0 50px;}
 .footer__text {font-family: 'Baskervville SC'; font-size: 14px; color: var(--color-g-0); text-align: center;}
 
-.sakura {z-index: 100;}
+.sakura {z-index: 100; background: #FFFFF0 !important;}
 
 

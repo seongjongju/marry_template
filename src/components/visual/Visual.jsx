@@ -3,6 +3,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Lettering from '../svg/Lettering';
 import { bride, bridegroom, day, month, placeFloor, placeHall, placeName, time, week, year } from '../../shared/environment/environment';
+import LetteringTwo from '../svg/LetteringTwo';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -11,7 +12,7 @@ const Visual = () => {
 
     useEffect(() => {
         const setFixedVh = () => {
-            const vh = window.innerHeight;
+            const vh = `${window.innerHeight + 10}px`;
             setVhHeight(vh);
             ScrollTrigger.refresh();
         };
@@ -21,7 +22,7 @@ const Visual = () => {
 
     return (
         <div id='visual' style={{ height: vhHeight, position: 'relative', }}>
-            <Lettering />
+            <LetteringTwo />
             <div className='inner'>
                 <div className='visual__detail'>
                     <div className='visual__client'>
