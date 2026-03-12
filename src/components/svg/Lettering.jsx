@@ -37,7 +37,7 @@ const Lettering = () => {
                   strokeWidth="2.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  variants={pathVariants}
+                  //variants={pathVariants}
                   initial="hidden"
                   animate="visible"
               />
@@ -64,7 +64,7 @@ const Lettering = () => {
                   strokeWidth="2.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  variants={pathVariants}
+                  //variants={pathVariants}
                   initial="hidden"
                   animate="visible"
               />
