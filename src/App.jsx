@@ -7,6 +7,7 @@ import Impart from './components/main/Impart'
 import Calendars from './components/main/Calendars'
 import Visual from './components/visual/Visual'
 import Footer from './components/footer/Footer'
+import { useEffect } from 'react'
 
 //우클릭 차단
 document.addEventListener('contextmenu', e => e.preventDefault());
@@ -24,6 +25,10 @@ document.addEventListener('keydown', e => {
 });
 
 function App() {
+  useEffect(() => {
+      const sakura = new Sakura('body', {});
+  }, []);
+
   return (
     <>
       <Visual />

@@ -11,6 +11,10 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
+    "@sakura-ui/core": "^0.4.0",
+    "@sakura-ui/forms": "^0.4.0",
+    "@sakura-ui/markdown": "^0.2.1",
+    "@sakura-ui/tailwind-theme-plugin": "^0.4.0",
     "dayjs": "^1.11.19",
     "framer-motion": "^12.27.1",
     "gsap": "^3.14.2",
@@ -19,7 +23,8 @@
     "react-calendar": "^6.0.0",
     "react-device-detect": "^2.2.3",
     "react-dom": "^19.2.0",
-    "react-photoswipe-gallery": "^4.0.0"
+    "react-photoswipe-gallery": "^4.0.0",
+    "sakura-js": "^1.1.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

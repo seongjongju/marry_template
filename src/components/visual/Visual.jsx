@@ -9,13 +9,10 @@ gsap.registerPlugin(ScrollTrigger);
 const Visual = () => {
     const [vhHeight, setVhHeight] = useState("100vh");
 
-    //비주얼 영역이 핸드폰 기종에 따라 높이를 맞추는 함수
     useEffect(() => {
         const setFixedVh = () => {
             const vh = window.innerHeight;
-
             setVhHeight(vh);
-
             ScrollTrigger.refresh();
         };
 
@@ -23,7 +20,7 @@ const Visual = () => {
     }, []);
 
     return (
-        <div id='visual' style={{ height: vhHeight }}>
+        <div id='visual' style={{ height: vhHeight, position: 'relative', }}>
             <Lettering />
             <div className='inner'>
                 <div className='visual__detail'>
