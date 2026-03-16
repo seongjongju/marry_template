@@ -31,7 +31,7 @@ const Visual = () => {
                         <p className='visual__name'>{bride}</p>
                     </div>
                     <p className='text-body-1'>
-                        {year}.{month}.{day} {week} {time} <br />
+                        {year}년 {month}월 {day}일 {week} {time} <br />
                         {placeName} {placeFloor} {placeHall}
                     </p>
                 </div>

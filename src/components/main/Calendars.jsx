@@ -25,7 +25,7 @@ const Calendars = () => {
     return (
         <section ref={app}>
             <div className='inner'>
-                <h1 className='title' style={{fontFamily: "Sumunjang_BodyM"}} ref={title}>{month.slice(1, 2)}월</h1>
+                <h1 className='title' style={{fontFamily: "Sumunjang_BodyM"}} ref={title}>{month}월</h1>
                 <div className='calendars' ref={calendar}>
                     <Calendar 
                         locale="en"
