@@ -1,8 +1,8 @@
 import React, { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
-import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 const useGsap = () => {
     const app = useRef(); //전체 영역
@@ -233,7 +233,7 @@ const useGsap = () => {
                     }
                 ); 
             }
-        }, app); 
+        }, app.current || undefined); 
         
         return () => ctx.revert();
     }, []);

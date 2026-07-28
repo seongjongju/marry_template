@@ -14,10 +14,6 @@ const images = [
     { original: '/images/gallery_img9.jpg', thumbnail: '/images/gallery_img9.jpg', alt: 'gallery_img9', width: 1526, height: 1011 },
     { original: '/images/gallery_img10.jpg', thumbnail: '/images/gallery_img10.jpg', alt: 'gallery_img10', width: 763, height: 1011 },
     { original: '/images/gallery_img11.jpg', thumbnail: '/images/gallery_img11.jpg', alt: 'gallery_img11', width: 763, height: 1011 },
-    { original: '/images/gallery_img12.jpg', thumbnail: '/images/gallery_img12.jpg', alt: 'gallery_img12', width: 763, height: 1011 },
-    { original: '/images/gallery_img13.jpg', thumbnail: '/images/gallery_img13.jpg', alt: 'gallery_img13', width: 763, height: 1011 },
-    { original: '/images/gallery_img14.jpg', thumbnail: '/images/gallery_img14.jpg', alt: 'gallery_img14', width: 763, height: 1011 },
-    { original: '/images/gallery_img15.jpg', thumbnail: '/images/gallery_img15.jpg', alt: 'gallery_img15', width: 763, height: 1011 },
 ];
 
 const Gallerys = () => {
