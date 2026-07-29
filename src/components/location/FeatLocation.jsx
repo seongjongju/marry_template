@@ -2,6 +2,11 @@ import React from 'react';
 import { appUrl, lat, long, place, placeMap, placeName, placeTel } from '../../shared/environment/environment';
 import useGsap from '../../features/hooks/gsap/useGsap';
 import useClipBoard from '../../features/hooks/clipBoard/useClipBoard';
+import locationMarker from 'src/assets/icons/location_marker_ico.svg';
+import locationTel from 'src/assets/icons/location_tel_ico.svg';
+import tMapIcon from 'src/assets/icons/tmap_ico.svg';
+import kakaoMapIcon from 'src/assets/icons/kakao_navi_ico.svg';
+import naverMapIcon from 'src/assets/icons/naver_map_ico.svg';
 
 const FeatLocation = () => {
     const {app, locationBtns, map, locationDetails } = useGsap();
@@ -92,14 +97,14 @@ const FeatLocation = () => {
                     className='location__button'
                     onClick={() => handleCopyClipBoard(place)}
                 >
-                    <img src="/icons/location_marker_ico.svg" alt="지도마커" />
+                    <img src={locationMarker} alt="지도마커" />
                     지도
                 </a>
                 <a 
                     href={`tel:${placeTel}`} 
                     className='location__button'
                 >
-                    <img src="/icons/location_tel_ico.svg" alt="전화걸기" />
+                    <img src={locationTel} alt="전화걸기" />
                     전화
                 </a>
             </div> {/* .location__btns : end */}
@@ -119,7 +124,7 @@ const FeatLocation = () => {
                         onClick={handleOpenTmap}
                         className="location__road--button"
                     >
-                        <img src="/icons/tmap_ico.svg" alt="티맵" />
+                        <img src={tMapIcon} alt="티맵" />
                         티맵
                     </a>
                     <a 
@@ -127,7 +132,7 @@ const FeatLocation = () => {
                         onClick={handleOpenKakaoNavi}
                         className="location__road--button"
                     >
-                        <img src="/icons/kakao_navi_ico.svg" alt="카카오내비" />
+                        <img src={kakaoMapIcon} alt="카카오내비" />
                         카카오내비
                     </a>
                     <a 
@@ -135,7 +140,7 @@ const FeatLocation = () => {
                         onClick={handleOpenNaverMap}
                         className="location__road--button"
                     >
-                        <img src="/icons/naver_map_ico.svg" alt="네이버지도" />
+                        <img src={naverMapIcon} alt="네이버지도" />
                         네이버지도
                     </a>
                 </div> {/* .location__road : end */}

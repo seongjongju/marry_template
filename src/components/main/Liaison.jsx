@@ -2,6 +2,8 @@ import React from 'react';
 import LiaisonDropDown from '../liaison/LiaisonDropDown';
 import useGsap from '../../features/hooks/gsap/useGsap';
 import { bride, bridegroom, bridegroomTel, brideTel } from '../../shared/environment/environment';
+import telIcon from 'src/assets/icons/tel_ico.svg';
+import smsIcon from 'src/assets/icons/sms_ico.svg';
 
 const Liaison = () => {
     const {app, liaison} = useGsap();
@@ -17,10 +19,10 @@ const Liaison = () => {
                         </p>
                         <div className='liaison__icons'>
                             <a href={`tel:${bridegroomTel}`}>
-                                <img src="/icons/tel_ico.svg" alt="전화" />
+                                <img src={telIcon} alt="전화" />
                             </a>
                             <a href={`sms:${bridegroomTel}`}>
-                                <img src="/icons/sms_ico.svg" alt="문자" />
+                                <img src={smsIcon} alt="문자" />
                             </a>
                         </div>
                     </div> {/* .liaison__item : end */}
@@ -31,10 +33,10 @@ const Liaison = () => {
                         </p>
                         <div className='liaison__icons'>
                             <a href={`tel:${brideTel}`}>
-                                <img src="/icons/tel_ico.svg" alt="전화" className='liaison__icon' />
+                                <img src={telIcon} alt="전화" className='liaison__icon' />
                             </a>
                             <a href={`sms:${brideTel}`}>
-                                <img src="/icons/sms_ico.svg" alt="문자" className='liaison__icon' />
+                                <img src={smsIcon} alt="문자" className='liaison__icon' />
                             </a>
                         </div>
                     </div> {/* .liaison__item : end */}

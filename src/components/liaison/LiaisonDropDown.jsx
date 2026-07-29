@@ -1,23 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
+import telIcon from 'src/assets/icons/tel_ico.svg';
+import smsIcon from 'src/assets/icons/sms_ico.svg';
 import { brideDad, brideDadTel, bridegroomDad, bridegroomDadTel, bridegroomMom, bridegroomMomTel, brideMom, brideMomTel } from '../../shared/environment/environment';
 
 const LiaisonDropDown = () => {
-    //const [dropdown, setDropdown] = useState(false);
 
     return (
         <div>
-            {/* <button 
-                className='parents-liaison-button'
-                onClick={() => setDropdown(prev => !prev)}
-            >
-                혼주에게 연락하기
-                <img 
-                    src="/icons/dropdown_arrow.svg"
-                    alt="드롭다운 화살표" 
-                    className='parents-liaison-button__arrow'
-                />
-            </button> */}
-
             <div 
                 className='parents-liaison'
             >
@@ -29,10 +18,10 @@ const LiaisonDropDown = () => {
                         </p>
                         <div className='liaison__icons'>
                             <a href={`tel:${bridegroomDadTel}`}>
-                                <img src="/icons/tel_ico.svg" alt="전화" className='liaison__icon' />
+                                <img src={telIcon} alt="전화" className='liaison__icon' />
                             </a>
                             <a href={`sms:${bridegroomDadTel}`}>
-                                <img src="/icons/sms_ico.svg" alt="문자" className='liaison__icon' />
+                                <img src={smsIcon} alt="문자" className='liaison__icon' />
                             </a>
                         </div>
                     </div> {/* .parents-liaison__parent : end */}
@@ -42,10 +31,10 @@ const LiaisonDropDown = () => {
                         </p>
                         <div className='liaison__icons'>
                             <a href={`tel:${bridegroomMomTel}`}>
-                                <img src="/icons/tel_ico.svg" alt="전화" className='liaison__icon' />
+                                <img src={telIcon} alt="전화" className='liaison__icon' />
                             </a>
                             <a href={`sms:${bridegroomMomTel}`}>
-                                <img src="/icons/sms_ico.svg" alt="문자" className='liaison__icon' />
+                                <img src={smsIcon} alt="문자" className='liaison__icon' />
                             </a>
                         </div>
                     </div> {/* .parents-liaison__parent : end */}
@@ -59,10 +48,10 @@ const LiaisonDropDown = () => {
                         </p>
                         <div className='liaison__icons'>
                             <a href={`tel:${brideDadTel}`}>
-                                <img src="/icons/tel_ico.svg" alt="전화" className='liaison__icon' />
+                                <img src={telIcon} alt="전화" className='liaison__icon' />
                             </a>
                             <a href={`sms:${brideDadTel}`}>
-                                <img src="/icons/sms_ico.svg" alt="문자" className='liaison__icon' />
+                                <img src={smsIcon} alt="문자" className='liaison__icon' />
                             </a>
                         </div>
                     </div> {/* .parents-liaison__parent : end */}
@@ -72,10 +61,10 @@ const LiaisonDropDown = () => {
                         </p>
                         <div className='liaison__icons'>
                             <a href={`tel:${brideMomTel}`}>
-                                <img src="/icons/tel_ico.svg" alt="전화" className='liaison__icon' />
+                                <img src={telIcon} alt="전화" className='liaison__icon' />
                             </a>
                             <a href={`sms:${brideMomTel}`}>
-                                <img src="/icons/sms_ico.svg" alt="문자" className='liaison__icon' />
+                                <img src={smsIcon} alt="문자" className='liaison__icon' />
                             </a>
                         </div>
                     </div> {/* .parents-liaison__parent : end */}

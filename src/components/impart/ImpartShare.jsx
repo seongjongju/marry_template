@@ -4,6 +4,8 @@ import useClipBoard from '../../features/hooks/clipBoard/useClipBoard';
 import useShare from '../../features/hooks/share/useShare';
 import useGsap from '../../features/hooks/gsap/useGsap';
 import { appUrl } from '../../shared/environment/environment';
+import kakaoIcon from 'src/assets/icons/kakao_ico.svg';
+import shareIcon from 'src/assets/icons/share_ico.svg';
 
 const ImpartShare = () => {
     const {app, shares} = useGsap();
@@ -21,7 +23,7 @@ const ImpartShare = () => {
                             href="#self"
                             onClick={handleClickShare}
                         >
-                            <img src="/icons/kakao_ico.svg" alt="카카오톡 아이콘" className='share__icon kakao' />
+                            <img src={kakaoIcon} alt="카카오톡 아이콘" className='share__icon kakao' />
                             카카오톡으로 공유하기
                         </button>   
                     )
@@ -31,7 +33,7 @@ const ImpartShare = () => {
                     href="#self"
                     onClick={() => {handleCopyClipBoard(appUrl)}} 
                 >
-                    <img src="/icons/share_ico.svg" alt="공유 아이콘" className='share__icon share' />
+                    <img src={shareIcon} alt="공유 아이콘" className='share__icon share' />
                     청첩장 주소 복사하기
                 </a>
             </div>

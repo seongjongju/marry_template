@@ -55,7 +55,7 @@ margin-bottom: 10%; font-weight: 400;}
 
 
 /************************* visual */
-#visual {width: 100%; height: 100vh; background: url(/images/gallery_img0.jpg) no-repeat 55% / cover; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding-bottom: 60px;}
+#visual {width: 100%; height: 100vh; background: url(../src/assets//images/gallery_img0.jpg) no-repeat 55% / cover; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding-bottom: 60px;}
 
 #visual::before {position: absolute; content: ''; top: 0; left: 0; width: 100%; height: 100%;
 background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, transparent 30%, transparent 70%, rgba(0,0,0,0.8) 100%);}

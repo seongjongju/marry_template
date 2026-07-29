@@ -3,6 +3,7 @@ import useGsap from '../../features/hooks/gsap/useGsap';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import { day, month, year } from '../../shared/environment/environment';
+import dDayIcon from 'src/assets/icons/d-day_ico.png';
 
 const Calendars = () => {
     const {app, title, calendar} = useGsap();
@@ -13,7 +14,7 @@ const Calendars = () => {
             const dDay = document.querySelector('.react-calendar__tile--active');
             const icon = document.createElement('img');
 
-            icon.src = "/icons/d-day_ico.png";
+            icon.src = dDayIcon;
             icon.alt = "d-day";
 
             dDay.appendChild(icon);

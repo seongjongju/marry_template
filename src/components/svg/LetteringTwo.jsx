@@ -1,5 +1,5 @@
 import React from 'react';
-import letteringThree from '/images/lettering2.svg';
+import letteringThree from 'src/assets/images/lettering2.svg';
 
 
 
