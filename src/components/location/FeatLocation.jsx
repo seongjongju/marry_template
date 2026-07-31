@@ -40,9 +40,20 @@ const FeatLocation = () => {
     // 카카오내비
     const handleOpenKakaoNavi = (e) => {        
         const kakaoNaviUrl = `https://map.kakao.com/link/to/${placeName},${long},${lat}`;
+
+        // 앱 스토어 이동 URL (앱이 없을 경우)
+        const appStoreUrl = "https://apps.apple.com/kr/app/%EC%B9%B4%EC%B9%B4%EC%98%A4%EB%82%B4%EB%B9%84-%EC%A3%BC%EC%B0%A8-%EB%B0%9C%EB%A0%9B-%EC%A0%84%EA%B8%B0%EC%B0%A8%EC%B6%A9%EC%A0%84-%EC%84%B8%EC%B0%A8-%EB%B3%B4%ED%97%98-%EC%A4%91%EA%B3%A0%EC%B0%A8/id417698849"; // iOS
+        const playStoreUrl = "https://play.google.com/store/search?q=%EC%B9%B4%EC%B9%B4%EC%98%A4%EB%82%B4%EB%B9%84&c=apps&hl=ko"; // Android
         
         if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-            e.currentTarget.href = kakaoNaviUrl;
+            window.location.href = kakaoNaviUrl;
+
+            setTimeout(() => {
+                if (document.webkitHidden || document.hidden) return;
+                
+                if(/Android/i.test(navigator.userAgent)) window.location.href = playStoreUrl;
+                else if(/iPhone|iPad|iPod/i.test(navigator.userAgent)) window.location.href = appStoreUrl;
+            }, 500);
         } else {
             e.preventDefault();
             alert('모바일 기기에서만 카카오내비 앱을 실행할 수 있습니다.');
