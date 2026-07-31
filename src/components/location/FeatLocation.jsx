@@ -13,14 +13,9 @@ const FeatLocation = () => {
     const {handleCopyClipBoard} = useClipBoard();
 
     //티맵
-    const handleOpenTmap = (e) => {
-        // 목적지 설정 (예: 코엑스)
-        const name = encodeURIComponent(placeName);
-        const x = long; // 경도 (Longitude)
-        const y = lat;  // 위도 (Latitude)
-        
+    const handleOpenTmap = (e) => {        
         // 티맵 앱 연동 스키마
-        const tmapUrl = `tmap://search?name=${name}&posx=${x}&posy=${y}`;
+        const tmapUrl = `tmap://search?name=${placeName}&posx=${long}&posy=${lat}`;
 
         // 앱 스토어 이동 URL (앱이 없을 경우)
         const appStoreUrl = "https://apps.apple.com/kr/app/id431589174"; // iOS
@@ -43,12 +38,8 @@ const FeatLocation = () => {
     };
 
     // 카카오내비
-    const handleOpenKakaoNavi = (e) => {
-        const name = placeName;
-        const x = long; // 경도 (Longitude)
-        const y = lat;  // 위도 (Latitude)
-        
-        const kakaoNaviUrl = `https://map.kakao.com/link/to/${name},${y},${x}`;
+    const handleOpenKakaoNavi = (e) => {        
+        const kakaoNaviUrl = `https://map.kakao.com/link/to/${placeName},${long},${lat}`;
         
         if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
             e.currentTarget.href = kakaoNaviUrl;
@@ -59,18 +50,13 @@ const FeatLocation = () => {
     };
 
     // 네이버지도
-    const handleOpenNaverMap = () => {
-        const name = encodeURIComponent(placeName);
-        const x = long; // 경도 (Longitude)
-        const y = lat;  // 위도 (Latitude)
-        const appName = appUrl; // 본인의 번들 ID/패키지명
-        
+    const handleOpenNaverMap = () => {        
         const openNaverMap = () => {
-            // 1. 네이버 지도 앱 실행 시도 (길찾기)
-            const scheme = `nmap://route/car?dlat=${y}&dlng=${x}&dname=${encodeURIComponent(name)}&appname=${appName}`;
+            // 네이버 지도 앱 실행 시도 (길찾기)
+            const scheme = `nmap://route/car?dlat=${lat}&dlng=${long}&dname=${encodeURIComponent(placeName)}&appname=${appUrl}`;
             
-            // 2. 앱이 없을 경우를 대비한 대체 웹 URL (모바일웹)
-            const webUrl = `https://m.place.naver.com/place/35751363/home${encodeURIComponent(name)}`;
+            // 앱이 없을 경우를 대비한 대체 웹 URL (모바일웹)
+            const webUrl = `https://m.place.naver.com/place/35751363/home${encodeURIComponent(placeName)}`;
 
             // 모바일 환경 체크 후 처리
             if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {

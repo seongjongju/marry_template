@@ -1,7 +1,6 @@
 import React from 'react';
 import 'photoswipe/dist/photoswipe.css';
 import { Gallery, Item } from 'react-photoswipe-gallery';
-import { aspectRatio } from 'framer-motion';
 
 const PhotoGallery = ({ images }) => {
     return (

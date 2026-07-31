@@ -15,18 +15,18 @@ import galleryImg_10 from 'src/assets/images/gallery_img10.jpg';
 import galleryImg_11 from 'src/assets/images/gallery_img11.jpg';
 
 const images = [
-    { original: galleryImg_0, thumbnail: galleryImg_0, alt: 'gallery_img0', width: 763, height: 1011 },
-    { original: galleryImg_1, thumbnail: galleryImg_1, alt: 'gallery_img1', width: 763, height: 1011 },
-    { original: galleryImg_2, thumbnail: galleryImg_2, alt: 'gallery_img2', width: 763, height: 1011 },
-    { original: galleryImg_3, thumbnail: galleryImg_3, alt: 'gallery_img3', width: 1526, height: 1011 },
-    { original: galleryImg_4, thumbnail: galleryImg_4, alt: 'gallery_img4', width: 763, height: 1011 },
-    { original: galleryImg_5, thumbnail: galleryImg_5, alt: 'gallery_img5', width: 763, height: 1011 },
-    { original: galleryImg_6, thumbnail: galleryImg_6, alt: 'gallery_img6', width: 763, height: 1011 },
-    { original: galleryImg_7, thumbnail: galleryImg_7, alt: 'gallery_img7', width: 763, height: 1011 },
-    { original: galleryImg_8, thumbnail: galleryImg_8, alt: 'gallery_img8', width: 763, height: 1011 },
-    { original: galleryImg_9, thumbnail: galleryImg_9, alt: 'gallery_img9', width: 1526, height: 1011 },
-    { original: galleryImg_10, thumbnail: galleryImg_10, alt: 'gallery_img10', width: 763, height: 1011 },
-    { original: galleryImg_11, thumbnail: galleryImg_11, alt: 'gallery_img11', width: 763, height: 1011 },
+    { original: galleryImg_0, thumbnail: galleryImg_0, alt: 'gallery_img0', width: 720, height: 1280 },
+    { original: galleryImg_1, thumbnail: galleryImg_1, alt: 'gallery_img1', width: 720, height: 1280 },
+    { original: galleryImg_2, thumbnail: galleryImg_2, alt: 'gallery_img2', width: 720, height: 1280 },
+    { original: galleryImg_3, thumbnail: galleryImg_3, alt: 'gallery_img3', width: 720, height: 1280 },
+    { original: galleryImg_4, thumbnail: galleryImg_4, alt: 'gallery_img4', width: 720, height: 1280 },
+    { original: galleryImg_5, thumbnail: galleryImg_5, alt: 'gallery_img5', width: 720, height: 1280 },
+    { original: galleryImg_6, thumbnail: galleryImg_6, alt: 'gallery_img6', width: 720, height: 1280 },
+    { original: galleryImg_7, thumbnail: galleryImg_7, alt: 'gallery_img7', width: 720, height: 1280 },
+    { original: galleryImg_8, thumbnail: galleryImg_8, alt: 'gallery_img8', width: 720, height: 1280 },
+    { original: galleryImg_9, thumbnail: galleryImg_9, alt: 'gallery_img9', width: 720, height: 1280 },
+    { original: galleryImg_10, thumbnail: galleryImg_10, alt: 'gallery_img10', width: 720, height: 1280 },
+    { original: galleryImg_11, thumbnail: galleryImg_11, alt: 'gallery_img11', width: 720, height: 1280 },
 ];
 
 const Gallerys = () => {
