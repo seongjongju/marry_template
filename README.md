@@ -2,6 +2,7 @@
 
 실제 지인분 청첩장으로 사용된 모바일 청첩장 프로젝트입니다. 개인정보 보호를 위해 미디어와 상세 내용은 더미 데이터로 대체되어 있으며, 운영 시 적용했던 우클릭 방지 및 개발자 도구 차단 로직은 코드 검수를 위해 해제된 상태입니다.
 * 서비스 URL: https://marry-template.pages.dev/
+* GitHub 저장소: https://github.com/seongjongju/marry_template
 
 ---
 
