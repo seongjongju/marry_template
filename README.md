@@ -15,7 +15,7 @@
 
 ---
 
-## 📌 Main Features
+## Main Features
 
 ### 1. 정보 제공 및 소통
 * **인사말:** 예식 일시 및 신랑·신부 정보 전달
@@ -41,7 +41,7 @@
 
 ---
 
-## 💡 Production Considerations
+## Production Considerations
 
 * **트래픽 및 배포 환경 최적화:** Cloudflare Pages를 통한 배포로 예식 당일 순간적인 하객 트래픽 집중 및 대용량 이미지 요청에 대비, 대역폭(Bandwidth) 제한 없는 안정적인 인프라 구축
 * **크로스 브라우징 및 UX 최적화:** OS별(iOS/Android) Web Share API 지원 여부와 딥링크 동작 방식 차이를 `react-device-detect` 기반 분기 로직으로 해결
